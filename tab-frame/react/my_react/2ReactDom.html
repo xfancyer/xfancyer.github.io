@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>first</title>
+</head>
+<script src="build/react.js" type="text/javascript" charset="utf-8"></script>
+<script src="build/react-dom.js" type="text/javascript" charset="utf-8"></script>
+<script src="build/browser.min.js" type="text/javascript" charset="utf-8"></script>
+
+<body>
+<div id="main"></div>
+<script type="text/babel">
+var names = ['小红','aa','bb'];
+	var MyEventComponent = React.createClass({
+		handleclick:function(ev){
+			console.log(ev);
+			alert(1);
+		},
+		render:function(){
+			<div>
+				<span>event</span>
+				<button onClick={this.handleClick}>点击</button>
+			</div>
+		}
+	})
+
+	var MyEventList = React.createClass({
+		handleClick:function(index){
+			console.log(index);
+		},
+		render:function(){
+			return(
+				<ul>
+					{
+						names.map(function(ele,index){
+							return <li onClick={this.handleClick.bind(this,index)} key={index}>{ele}</li>
+						}.bind(this))
+						
+					}
+				</ul>
+			)
+		}
+	})
+	ReactDOM.render(<MyEventList/>,document.getElementById('main'));
+</script>
+</body>
+</html>

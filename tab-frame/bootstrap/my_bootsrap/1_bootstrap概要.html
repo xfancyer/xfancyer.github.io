@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Bootstrap 101 Template</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="utf-8"/>
+    <!-- Bootstrap -->
+    <link href="css/bootstrap.min.css" rel="stylesheet" media="screen">
+  </head>
+  <style>
+    .continer-fluid{
+      border:2px solid pink;
+    }
+    .container{
+      border:2px solid #abcdef;
+    }
+    .container_fix{
+      border:2px solid #ccc;
+      width:1000px !important;
+    }
+  </style>
+  <body>
+    <h1>Hello, Bootstrap!</h1>
+   <div class="container-fluid">
+      布局的容器 最好容器不嵌套
+    </div>
+    <div class="container">
+      》1200>=<br/>
+      》992>=<br/>
+      》768>=<br/>
+      》768<<br/>
+      》auto<br/>
+    </div>
+    <div class="container container_fix">
+      也可以指定宽度
+    </div>
+    <script src="http://code.jquery.com/jquery.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+  </body>
+</html>

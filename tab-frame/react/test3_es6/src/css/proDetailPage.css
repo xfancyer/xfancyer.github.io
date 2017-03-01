@@ -1,0 +1,14 @@
+#pro-detail .content{
+	padding: 10px 20px;
+	top: 50px;
+	bottom: 0;
+}
+
+#pro-detail .pro-img{
+	width: 85%;
+	height: 50%;
+	
+}
+#pro-detail .pro-li{
+	margin-top: 10px;
+}

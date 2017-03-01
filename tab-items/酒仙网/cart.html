@@ -1,0 +1,621 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>购物车</title>
+<!--[if lt IE 9]>
+<script src="js/html5shiv.min.js"></script>
+<script src="js/respond.min.js"></script>
+<![endif]-->
+<link href="css/css.css" rel="stylesheet" type="text/css">
+<link href="css/common.css" rel="stylesheet" type="text/css">
+<link href="http://at.alicdn.com/t/font_hftkortlsvih33di.css" rel="stylesheet" type="text/css">
+<script type="text/javascript" src="js/jquery.js"></script>
+<script type="text/javascript" src="js/common.js"></script>
+<script type="text/javascript" src="js/cart.js"></script>
+<script type="text/javascript" src="js/cookie.js"></script>
+<script type="text/javascript" src="js/gouwuche.js"></script>
+</head>
+<body style="background:#fff;">
+<!--最顶部的栏目-->
+<div class="top1 fix">
+  <div class="container1">
+      <div class="fl huang">
+          <a href="#" class="denglv">Hi请登录</a>
+          <a href="#" class="zhuce">免费注册</a>
+      </div>
+      <div class="fr g_span">
+      	<a href="#">我的订单</a><span>|</span><a href="#">我的酒仙网</a><span>|</span>客服热线<em>400-617-9999</em>
+      </div>
+  </div>
+</div>
+
+<!--logo-->
+<div class="container1">
+  <div class="l_top1 fix">
+      <div class="logo fl"><a href="index.html"><img src="images/logo.png"></a></div>
+	  <div class="buzhu fr">
+      	<p><img src="images/che_03.png"></p>
+        <p><span class="dibu">我的购物车</span><em></em><span>确认订单信息</span><em></em><span>成功提交订单</span></p>
+      </div>	      
+  </div>        	
+</div>
+
+<!--内容区-->
+<div class="container1">
+	<div class="gouwu fix">
+    	<div class="biaoti4 fl">购物车</div>
+		<div class="baoyou fr">满<span>100元</span>包邮（新疆、西藏满<span>300元</span>包邮）</div>
+    </div>
+    
+    <div class="shopcart">
+    	<div class="cart_lan">
+        	  <span class="cart_sp1"><input type="checkbox" class="chec1">全部</span>
+            <span class="cart_sp2">商品名称</span>
+            <span class="cart_sp3">酒仙价</span>
+            <span class="cart_sp4">送金币</span>
+            <span class="cart_sp5">数量</span>
+            <span class="cart_sp6">商品合计</span>
+            <span class="cart_sp7">操作</span>
+        </div>
+        <div class="shopt_c">
+        	<!--购物车商品的结构-->
+        </div>
+        
+        <div class="shop_shu">
+        	<p>商品数量：<em class="count2"></em>件<span>赠送金币：<i style="font-style: normal;" class="jinbie">49</i>个</span></p>
+            <p>活动立减：￥0</p>
+        </div>
+        
+        <div class="jiesuan fix">
+        	<span class="fl">
+        		<input type="checkbox" style="margin-left: 15px;" class="chec1">全部
+        		<a href="#" class="scxz">删除选中商品</a>
+        		<a href="#">清空购物车</a>
+        		<a href="list.html" class="jixu">继续购物</a>
+        	</span>
+        	<span class="fr">总计（不含运费）：<em class="money2"></em><a href="#" class="suan1">去结算</a></span>
+        </div>
+    </div>
+    
+    <div class="caini fix">
+  	<dl id="tab10">
+        <dd class="current10">猜您喜欢</dd>
+        <dd>我的收藏</dd>
+        <dd>最近浏览</dd>
+        <dd>新品推荐</dd>
+     </dl>
+    <div id="content10">
+        <div class="zhoupin10" style="display:block;">
+          <div class="tuijian1">
+    		<img src="images/che_11.png" id="tui_left1">
+       		<img src="images/che_14.png" id="tui_right1">
+     	   <ul id="imgs">
+            <li>
+                <div class="you_hui1">
+                    <ul>
+                      <li>
+                          <div class="t_tu">
+                              <a href="#"><img src="images/liu2.jpg"></a>
+                          </div>
+                          <div class="shop_wen">
+                              <p class="shop_t"><a href="#">53°玻瓶汾酒475ml（3瓶装）</a></p>
+                              <p>￥98.00</p>
+                          </div>
+                          <div class="jiaru"><a href="#"><em></em>加入购物车</a></div>
+                      </li>
+                      <li>
+                          <div class="t_tu">
+                              <a href="#"><img src="images/liu3.jpg"></a>
+                          </div>
+                          <div class="shop_wen">
+                              <p class="shop_t"><a href="#">42°优级杏花村1000ml+42°优级杏花村500ml</a></p>
+                              <p>￥138.00</p>
+                          </div>
+                          <div class="jiaru"><a href="#"><em></em>加入购物车</a></div>
+                      </li>
+                      <li>
+                          <div class="t_tu">
+                              <a href="#"><img src="images/liu4.jpg"></a>
+                          </div>
+                          <div class="shop_wen">
+                              <p class="shop_t"><a href="#">
+            法国茉莉花干红葡萄酒750ml（双瓶装）</a></p>
+                              <p>￥99.00</p>
+                          </div>
+                          <div class="jiaru"><a href="#"><em></em>加入购物车</a></div>
+                      </li>
+                      <li>
+                          <div class="t_tu">
+                              <a href="#"><img src="images/liu5.jpg"></a>
+                          </div>
+                          <div class="shop_wen">
+                              <p class="shop_t"><a href="#">52°五粮液股份福禄寿禧500ml</a></p>
+                              <p>￥169.00</p>
+                          </div>
+                          <div class="jiaru"><a href="#"><em></em>加入购物车</a></div>
+                      </li>
+                      <li>
+                          <div class="t_tu">
+                              <a href="#"><img src="images/liu14.jpg"></a>
+                          </div>
+                          <div class="shop_wen">
+                              <p class="shop_t"><a href="#">53°茅台王子酒500ml（双瓶装</a></p>
+                              <p>￥174.00</p>
+                          </div>
+                          <div class="jiaru"><a href="#"><em></em>加入购物车</a></div>
+                      </li>
+                    </ul>
+                </div>
+            </li>
+            <li>
+                <div class="you_hui1">
+                    <ul> 
+                      <li>
+                          <div class="t_tu">
+                              <a href="#"><img src="images/liu8.jpg"></a>
+                          </div>
+                          <div class="shop_wen">
+                              <p class="shop_t"><a href="#">53°玻瓶汾酒475ml（3瓶装）</a></p>
+                              <p>￥98.00</p>
+                          </div>
+                          <div class="jiaru"><a href="#"><em></em>加入购物车</a></div>
+                      </li>
+                      <li>
+                          <div class="t_tu">
+                              <a href="#"><img src="images/liu9.jpg"></a>
+                          </div>
+                          <div class="shop_wen">
+                              <p class="shop_t"><a href="#">42°优级杏花村1000ml+42°优级杏花村500ml</a></p>
+                              <p>￥138.00</p>
+                          </div>
+                          <div class="jiaru"><a href="#"><em></em>加入购物车</a></div>
+                      </li>
+                      <li>
+                          <div class="t_tu">
+                              <a href="#"><img src="images/liu10.jpg"></a>
+                          </div>
+                          <div class="shop_wen">
+                              <p class="shop_t"><a href="#">
+            法国茉莉花干红葡萄酒750ml（双瓶装）</a></p>
+                              <p>￥99.00</p>
+                          </div>
+                          <div class="jiaru"><a href="#"><em></em>加入购物车</a></div>
+                      </li>
+                      <li>
+                          <div class="t_tu">
+                              <a href="#"><img src="images/liu1.jpg"></a>
+                          </div>
+                          <div class="shop_wen">
+                              <p class="shop_t"><a href="#">52°五粮液股份福禄寿禧500ml</a></p>
+                              <p>￥169.00</p>
+                          </div>
+                          <div class="jiaru"><a href="#"><em></em>加入购物车</a></div>
+                      </li>
+                      <li>
+                          <div class="t_tu">
+                              <a href="#"><img src="images/liu2.jpg"></a>
+                          </div>
+                          <div class="shop_wen">
+                              <p class="shop_t"><a href="#">53°茅台王子酒500ml（双瓶装</a></p>
+                              <p>￥174.00</p>
+                          </div>
+                          <div class="jiaru"><a href="#"><em></em>加入购物车</a></div>
+                      </li>
+                    </ul>
+                </div>
+            </li>
+        </ul>
+   		 </div>
+        </div>
+        <div class="zhoupin10">
+          <div class="zhanmei">暂无商品</div>
+        </div>
+        <div class="zhoupin10">
+          	<div class="you_hui1">
+                    <ul> 
+                      <li>
+                          <div class="t_tu">
+                              <a href="#"><img src="images/liu8.jpg"></a>
+                          </div>
+                          <div class="shop_wen">
+                              <p class="shop_t"><a href="#">53°玻瓶汾酒475ml（3瓶装）</a></p>
+                              <p>￥98.00</p>
+                          </div>
+                          <div class="jiaru"><a href="#"><em></em>加入购物车</a></div>
+                      </li>
+                      <li>
+                          <div class="t_tu">
+                              <a href="#"><img src="images/liu9.jpg"></a>
+                          </div>
+                          <div class="shop_wen">
+                              <p class="shop_t"><a href="#">42°优级杏花村1000ml+42°优级杏花村500ml</a></p>
+                              <p>￥138.00</p>
+                          </div>
+                          <div class="jiaru"><a href="#"><em></em>加入购物车</a></div>
+                      </li>
+                      <li>
+                          <div class="t_tu">
+                              <a href="#"><img src="images/liu10.jpg"></a>
+                          </div>
+                          <div class="shop_wen">
+                              <p class="shop_t"><a href="#">
+            法国茉莉花干红葡萄酒750ml（双瓶装）</a></p>
+                              <p>￥99.00</p>
+                          </div>
+                          <div class="jiaru"><a href="#"><em></em>加入购物车</a></div>
+                      </li>
+                      <li>
+                          <div class="t_tu">
+                              <a href="#"><img src="images/liu1.jpg"></a>
+                          </div>
+                          <div class="shop_wen">
+                              <p class="shop_t"><a href="#">52°五粮液股份福禄寿禧500ml</a></p>
+                              <p>￥169.00</p>
+                          </div>
+                          <div class="jiaru"><a href="#"><em></em>加入购物车</a></div>
+                      </li>
+                      <li>
+                          <div class="t_tu">
+                              <a href="#"><img src="images/liu2.jpg"></a>
+                          </div>
+                          <div class="shop_wen">
+                              <p class="shop_t"><a href="#">53°茅台王子酒500ml（双瓶装</a></p>
+                              <p>￥174.00</p>
+                          </div>
+                          <div class="jiaru"><a href="#"><em></em>加入购物车</a></div>
+                      </li>
+                    </ul>
+                </div>
+        </div> 
+        <div class="zhoupin10">
+          	<div class="you_hui1">
+                    <ul>
+                      <li>
+                          <div class="t_tu">
+                              <a href="#"><img src="images/liu2.jpg"></a>
+                          </div>
+                          <div class="shop_wen">
+                              <p class="shop_t"><a href="#">53°玻瓶汾酒475ml（3瓶装）</a></p>
+                              <p>￥98.00</p>
+                          </div>
+                          <div class="jiaru"><a href="#"><em></em>加入购物车</a></div>
+                      </li>
+                      <li>
+                          <div class="t_tu">
+                              <a href="#"><img src="images/liu3.jpg"></a>
+                          </div>
+                          <div class="shop_wen">
+                              <p class="shop_t"><a href="#">42°优级杏花村1000ml+42°优级杏花村500ml</a></p>
+                              <p>￥138.00</p>
+                          </div>
+                          <div class="jiaru"><a href="#"><em></em>加入购物车</a></div>
+                      </li>
+                      <li>
+                          <div class="t_tu">
+                              <a href="#"><img src="images/liu4.jpg"></a>
+                          </div>
+                          <div class="shop_wen">
+                              <p class="shop_t"><a href="#">
+            法国茉莉花干红葡萄酒750ml（双瓶装）</a></p>
+                              <p>￥99.00</p>
+                          </div>
+                          <div class="jiaru"><a href="#"><em></em>加入购物车</a></div>
+                      </li>
+                      <li>
+                          <div class="t_tu">
+                              <a href="#"><img src="images/liu5.jpg"></a>
+                          </div>
+                          <div class="shop_wen">
+                              <p class="shop_t"><a href="#">52°五粮液股份福禄寿禧500ml</a></p>
+                              <p>￥169.00</p>
+                          </div>
+                          <div class="jiaru"><a href="#"><em></em>加入购物车</a></div>
+                      </li>
+                      <li>
+                          <div class="t_tu">
+                              <a href="#"><img src="images/liu14.jpg"></a>
+                          </div>
+                          <div class="shop_wen">
+                              <p class="shop_t"><a href="#">53°茅台王子酒500ml（双瓶装</a></p>
+                              <p>￥174.00</p>
+                          </div>
+                          <div class="jiaru"><a href="#"><em></em>加入购物车</a></div>
+                      </li>
+                    </ul>
+                </div>
+        </div>   
+          
+         
+          
+             
+    </div>
+    </div>
+    
+</div>
+
+
+
+<!--底部导航-->
+<div class="bottom_nav">
+    <div class="container">
+      <div class="b_t fix">
+          <div class="dianhua fl"><img src="images/pu_03.png"><b>400-617-9999</b><span>客服热线8:00-23:00贴心服务</span></div>
+          <div class="sou_right fr">
+              <span>优惠促销早知道</span>
+              <input type="text"  value="请输入您的邮箱地址" onfocus="if (value =='请输入您的邮箱地址'){value =''}" onblur="if (value ==''){value='请输入您的邮箱地址'}" class="text1">
+          </div>
+      </div>
+      <div class="b_bot">
+          <div class="daoheng fl">
+              <ul>
+              	<li><img src="images/pu_13.png"><b>新手入门</b></li>
+                <li><a href="#">购物保障</a></li>
+                <li><a href="#">服务协议</a></li>
+                <li><a href="#">发票说明</a></li>
+              </ul>
+              <ul>
+              	<li><img src="images/pu_13.png"><b>常见问题</b></li>
+                <li><a href="#">红包使用</a></li>
+                <li><a href="#">返现使用</a></li>
+                <li><a href="#">兑换码</a></li>
+              </ul>
+              <ul>
+              	<li><img src="images/pu_13.png"><b>配送说明</b></li>
+                <li><a href="#">配送时间</a></li>
+                <li><a href="#">配送费用</a></li>
+                <li><a href="#">配送范围</a></li>
+              </ul>
+              <ul>
+              	<li><img src="images/pu_13.png"><b>支付方式</b></li>
+                <li><a href="#">货到付款</a></li>
+                <li><a href="#">在线支付</a></li>
+                <li><a href="#">线下支付</a></li>
+              </ul>
+              <ul>
+              	<li><img src="images/pu_13.png"><b>售后服务</b></li>
+                <li><a href="#">品质保证</a></li>
+                <li><a href="#">退换货政策</a></li>
+                <li><a href="#">退换货流程</a></li>
+              </ul>
+              <ul>
+              	<li><img src="images/pu_13.png"><b>特色服务</b></li>
+                <li><a href="#">会员俱乐部</a></li>
+                <li><a href="#">企业客户</a></li>
+                <li><a href="#">酒仙社区</a></li>
+              </ul>
+          </div>
+          <div class="weibo fl">
+          	<p><img src="images/pu_06.png">酒仙新浪微博</p>
+            <p class="weixin"><img src="images/pu_09.png">酒仙微信<b><img src="images/weixin-code.jpg"></b></p>
+          </div>
+      </div>
+    </div>
+</div>
+
+<!--版权信息-->
+<div class="copyright">
+	<div class="container">
+    	<div class="copy_left fl">
+        	<p>
+                <a href="#">公司简介</a><span>|</span>   
+                <a href="#">管理团队</a><span>|</span>   
+                <a href="#">媒体报道</a><span>|</span>   
+                <a href="#">联系我们</a><span>|</span>  
+                <a href="#">招贤纳士</a><span>|</span>   
+                <a href="#">友情链接</a><span>|</span> 
+                <a href="#">网站地图</a><span>|</span>  
+                <a href="#">品牌大全</a> 
+            </p>
+            <p class="c_1">酒仙网电子商务股份有限公司  ©  酒仙网   2011  jiuxian.com  All   Rights Reserved   京ICP备11007961号-1   京公网安备1101050188221</p>
+            <p class="youqian">
+                <a href="#">大麦网</a><span>|</span> 
+                <a href="#">1折网</a><span>|</span>
+                <a href="#">铁血军事</a><span>|</span>   
+                <a href="#">酒仙网白酒</a><span>|</span>  
+                <a href="#">酒仙网葡萄酒</a><span>|</span>   
+                <a href="#">酒仙网团购</a><span>|</span>
+                <a href="#">购酒论坛</a><span>|</span>  
+                <a href="#">名鞋库</a><span>|</span>
+                <a href="#">更多</a>
+            </p>
+            <p>统一社会信用代码  91110302554833311D   食品流通许可证编号  SP1103021310005747 </p>
+            <p>地址：北京市北京经济技术开发区经海五路58号院8号楼1至6层</p>
+            <p><img src="images/cnnic.png"><img src="images/copyBot03.jpg"><img src="images/copyBot04.jpg"><img src="images/copyBot05.jpg"></p>
+            <p class="wcn">购买前请确认达到法定饮酒年龄！酒仙网不销售任何含酒精产品给18岁以下人士！</p>
+        </div>
+        <div class="copy_right fl">
+        	<div class="xian_wang fl">
+            	<p><img src="images/1_09.jpg"></p>
+                <p>手机酒仙网</p>
+            </div>
+            <div class="xian_wang fl">
+            	<p><img src="images/jkd-code.jpg"></p>
+                <p>酒快到</p>
+            </div>
+        </div>
+    </div>
+</div>   
+
+<!----------------------------------遮罩---------------------------------->
+<div class="zhezhao"></div>
+<script type="text/javascript">
+	setInterval(function(){
+		var w=$(window).width();
+		var h=$(document).height();
+		$(".zhezhao").css({"height":h+"px","width":w+"px"});	
+	},10)
+</script>  
+<!----------------------------------注册---------------------------------->
+
+<div class="tc1">
+	<a href="javascript:void(0)" class="gb1"><img src="images/gouwu_17.png"></a>
+	<div class="deng_tab">
+      <dl id="tab8">
+        <dd>登录</dd>
+        <dd>注册</dd>
+      </dl>
+      <div id="content8">
+        <div class="zhoupin8 tab_deng">
+          	<div class="gou_denglv">
+            	<div class="shuru">
+            		<input type="text" onblur="dd8()" placeholder="账号" class="t_text zh">
+            		<span class="z_shou"></span>
+                    <em class="z_dui"><img src="images/dui_03.png"></em>
+                    <i class="z_cuo"><img src="images/dui_05.png"></i>
+            	</div>
+                <div class="shuru">
+                	<input type="password" onblur="dd11()" placeholder="密码" class="t_text1 mima">
+                	<span class="z_shou"></span>
+                    <em class="z_dui"><img src="images/dui_03.png"></em>
+                    <i class="z_cuo"><img src="images/dui_05.png"></i>
+                </div>
+                <div class="t_text5">
+                	<input type="text" onblur="dd14()" placeholder="验证码" class="t_text3 dyzm">
+                	<span class="dyanz"></span>
+                	<img src="images/gouwu_15.png" class="dshuan"/>
+                	<span class="z_shou"></span>
+                </div>
+                <div class="zidong"><span class="fl"><input type="checkbox" class="chec">自动登录</span><span class="fr"><a href="#">忘记密码</a></span></div>
+                <div class="a_deng d_coo"><a href="#">登录</a></div>
+                <p class="shiyong">使用合作账号登录</p>
+                <div class="hezuo">
+                	<span class="he_1"></span>
+                    <span class="he_2"></span>
+                    <span class="he_3"></span>
+                    <span class="he_4"></span>
+                </div>
+            </div>
+        </div>
+        <div class="zhoupin8 tab_zhuce">
+          <div class="deng_tab1">
+              <dl id="tab9">
+                <dd class="current9">手机</dd>
+                <dd>邮箱</dd>
+              </dl>
+              <div id="content9">
+                <div class="zhoupin9" style="display:block;">
+                    <div class="shuru">
+                    	<input type="text" onblur="dd()" placeholder="手机号"  class="t_text4 zhengze">
+                    	<span class="z_shou"></span>
+                    	<em class="z_dui"><img src="images/dui_03.png"></em>
+                    	<i class="z_cuo"><img src="images/dui_05.png"></i>
+                    </div>
+                    <div class="t_text5">
+                    	<input type="text" onblur="dd1()" placeholder="验证码" class="t_text6 yzm">
+                    	<span class="yanz">1234</span>
+                    	<img src="images/gouwu_15.png" class="shuan"/>
+                    	<span class="z_shou"></span>
+                    </div>
+                    <div class="xiaozheng">
+                    	<input type="text" onblur="dd2()" placeholder="校验码" class="t_text7 jym"/>
+                    	<input type="button" value="获取短信校验码" class="btn6 huoqu">
+                    	<span class="z_shou1"></span>
+                    	<em class="z_dui1"><img src="images/dui_03.png"></em>
+                    	<i class="z_cuo1"><img src="images/dui_05.png"></i>
+                    </div>
+                    <div class="shuru1">
+                    	<input type="password" onblur="dd3()" placeholder="设置密码" class="t_text4 pwd">
+                    	<span class="z_shou"></span>
+                    	<em class="z_dui"><img src="images/dui_03.png"></em>
+                    	<i class="z_cuo"><img src="images/dui_05.png"></i>
+                    </div>
+                    <div class="shuru1">
+                    	<input type="password" onblur="dd4()" placeholder="确认密码" class="t_text4 pwd1">
+                    	<span class="z_shou"></span>
+                    	<em class="z_dui"><img src="images/dui_03.png"></em>
+                    	<i class="z_cuo"><img src="images/dui_05.png"></i>
+                    </div>
+                    <div class="zidong"><span class="fl"><input type="checkbox"  onclick="dd5()" checked="checked" class="chec dxu">我已阅读并同意<a href="#">《酒仙网用户注册协议》</a></span>
+                    	<p>请接受服务协议！</p>
+                    </div>
+                    <div class="a_deng fl"><a href="#">立即注册</a></div>
+                </div>
+                <div class="zhoupin9">
+                	<div class="shuru">
+                		<input type="text" onblur="dd10()" placeholder="邮箱账号" class="t_text4 yx">
+                		<span class="z_shou"></span>
+                    	<em class="z_dui"><img src="images/dui_03.png"></em>
+                    	<i class="z_cuo"><img src="images/dui_05.png"></i>
+                	</div>
+                	<div class="shuru">
+                		<input type="text" onblur="dd13()" placeholder="用户名" class="t_text4 yhm">
+                		<span class="z_shou"></span>
+                    	<em class="z_dui"><img src="images/dui_03.png"></em>
+                    	<i class="z_cuo"><img src="images/dui_05.png"></i>
+                	</div>
+                    <div class="shuru1">
+                    	<input type="password" onblur="dd6()" placeholder="设置密码" class="t_text4 pwd2">
+                    	<span class="z_shou"></span>
+                    	<em class="z_dui"><img src="images/dui_03.png"></em>
+                    	<i class="z_cuo"><img src="images/dui_05.png"></i>
+                    </div>
+                    <div class="shuru1">
+                    	<input type="password" onblur="dd7()" placeholder="确认密码" class="t_text4 pwd3">
+                    	<span class="z_shou"></span>
+                    	<em class="z_dui"><img src="images/dui_03.png"></em>
+                    	<i class="z_cuo"><img src="images/dui_05.png"></i>
+                    </div>
+                    <div class="t_text5">
+                    	<input type="text" onblur="dd9()" placeholder="验证码" class="t_text6 yzm1">
+                    	<span class="yanz1"></span>
+                    	<img src="images/gouwu_15.png" class="shuan1"/>
+                    	<span class="z_shou"></span>
+                    </div>  
+                    <div class="zidong"><span class="fl"><input type="checkbox"  onclick="dd12()" checked="checked" class="chec dxu1">我已阅读并同意<a href="#">《酒仙网用户注册协议》</a></span>
+                    	<p>请接受服务协议！</p>
+                    </div>
+                    <div class="a_deng1 fl"><a href="#">立即注册</a></div>
+                </div>
+              </div>
+            </div>
+        </div>
+      </div>
+    </div>
+</div>
+
+<script type="text/javascript">
+	setInterval(function(){
+		var w=($(window).width()-380)/2;
+		var h=($(window).height()-490)/2;
+		$(".tc1").css({"top":h+"px","left":w+"px"});
+	},10)
+	$(".denglv").click(function(){
+		$("#tab8 dd:eq(0)").addClass("current8")
+		$("#tab8 dd:eq(1)").removeClass("current8")
+		$(".tab_deng").css("display","block")
+		$(".tab_zhuce").css("display","none")
+		$(".tc1").css("display","block");
+		$(".zhezhao").css("display","block");
+	})
+	
+	$(".zhuce").click(function(){
+		$("#tab8 dd:eq(1)").addClass("current8")
+		$("#tab8 dd:eq(0)").removeClass("current8")
+		$(".tab_zhuce").css("display","block")
+		$(".tab_deng").css("display","none")
+		$(".tc1").css("display","block");
+		$(".zhezhao").css("display","block");
+	})
+	
+	$(".gb1").click(function(){
+		$(".tc1").css("display","none");	
+		$(".zhezhao").css("display","none");
+	})
+</script> 
+<script>
+	
+		var arr=getCookie("yonghuming");
+	//alert(arr)
+	if(arr.length==""){
+		$(".huang span").html("欢迎来酒仙网！");
+	}else{
+		$(".huang span").html("hi,"+arr.name);
+		$(".xiaoxi,.tuichu").show();
+		$(".denglv,.zhuce").css("display","none");
+	}
+	
+</script>
+<script type="text/javascript" src="js/biaodan.js" ></script>
+</body>
+</html>

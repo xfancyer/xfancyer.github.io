@@ -1,0 +1,157 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>无标题文档</title>
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="css/bootstrap.css">
+<style>
+.my-btnStyle button{ width:85px; height:50px; border:none; background:#f6f8f8;}
+.my-btnStyle .dropdown-menu img{ margin:5px;}
+.my-btnStyle .dropdown-menu{ animation:.3s linear fadeIn;}
+@keyframes fadeIn{
+	0%{ opacity:0; transform:translateY(-20px);}
+	100%{ opacity:1; transform:translateY(0px);}
+}
+.dropdown-menu .divider{
+	margin:5px 0;
+}
+.mydropdown .glyphicon{
+	top:3px;
+}
+
+body{margin-top:50px;}
+.zhihubox{width:960px;padding:0;}
+.zhihubox .navbar a{}
+.zhihu{background-image:-moz-linear-gradient(center top,#086ed5,#055db5);}
+.zhihubox .navbar-nav a{color:-white !important;}
+.zhihubox .navbar-brand > img{margin-top:-4px;}
+</style>
+</head>
+
+<body style="height:2000px;">
+<nav class="navbar navbar-default navbar-fixed-top zhihu">
+	<div class="container zhihubox">
+		<div class="navbar-header">
+			<a href="#" class="navbar-brand">
+				<img src="img/zhihulogo.png"/>
+			</a>
+		</div>
+		<form class="navbar-form navbar-left">
+			<div class="input-group">
+				<input type="text" style="width:320px;" placeholder="搜索问题、话题和人" class="form-control">
+				<span class="input-group-addon"><a href=""><span class="glyphicon-search glyphicon"></span></a></span>
+			</div>
+		</form>
+		<ul class="nav navbar-nav navbar-left">
+			<li><a href="#">首页</a></li>
+			<li><a href="#">话题</a></li>
+			<li><a href="#">发现</a></li>
+			
+			<li class="dropdown">
+				<a href="" class="dropdown-toggle" data-toggle="dropdown">下拉项 <span class="caret"></span></a>
+				<ul class="dropdown-menu">
+					<li><a href="#">child1</a></li>
+					<li><a href="#">child2</a></li>
+				</ul>
+			</li>
+				
+
+		</ul>
+		
+		<ul class="nav navbar-nav navbar-right">
+			<li><a href="#"><span class="glyphicon glyphicon-user"></span> 首页</a></li>
+			<li><a href="#">话题</a></li>
+		</ul>
+		<button class="btn btn-primary navbar-btn navbar-right btn-sm">提问</button>
+	</div>
+</nav>
+<br>
+<div class="container">
+	<div class="dropdown mydropdown">
+		<button class="btn btn-default dropdown-toggle" data-toggle="dropdown">btn <span class="caret"></span></button>
+		
+		<ul class="dropdown-menu">
+
+			<li class="dropdown-header">
+				one section
+			</li>
+			<li class="divider">
+			</li>
+			<li>
+				<a>
+					<span class="glyphicon glyphicon-pencil"></span>
+					<span>glyphicon</span>
+				</a>
+			</li>
+			<li>
+				<a>
+					<span class="glyphicon glyphicon-edit"></span>
+					<span>glyphicon</span>
+				</a>
+			</li>
+			<li>
+				<a>
+					<span class="glyphicon glyphicon-filter"></span>
+					<span>glyphicon</span>
+				</a>
+			</li>
+			<li class="divider"></li>
+			<li class="dropdown-header">
+				two section
+			</li>
+			<li class="divider"></li>
+			
+			<li>
+				<a>
+					<span class="glyphicon glyphicon-filter"></span>
+					<span>glyphicon</span>
+				</a>
+			</li>
+			<li>
+				<a>
+					<span class="glyphicon glyphicon-filter"></span>
+					<span>glyphicon</span>
+				</a>
+			</li>
+			<li>
+				<a>
+					<span class="glyphicon glyphicon-filter"></span>
+					<span>glyphicon</span>
+				</a>
+			</li>
+		</ul>
+	</div>
+
+	<br><br>
+    <div class="dropdown my-btnStyle">
+        <button class="btn btn-default dropdown-toggle" type="button" data-toggle="dropdown">
+            Plugins
+            <span class="caret"></span>
+        </button>
+        <ul class="dropdown-menu">
+            <li><a href="/categories/32/wordpress-plugins">
+		                 <img width="16" height="16" src="https://www.codester.com/static/uploads/categories/32/icon-alt.png" class="m-r-sm">
+		                  <span>Wordpress</span>
+		                </a></li>
+            <li><a href="/categories/32/wordpress-plugins">
+		                 <img width="16" height="16" src="https://www.codester.com/static/uploads/categories/32/icon-alt.png" class="m-r-sm">
+		                  <span>Wordpress</span>
+		                </a></li>
+                        <li><a href="/categories/32/wordpress-plugins">
+		                 <img width="16" height="16" src="https://www.codester.com/static/uploads/categories/32/icon-alt.png" class="m-r-sm">
+		                  <span>Wordpress</span>
+		                </a></li>
+                        <li><a href="/categories/32/wordpress-plugins">
+		                 <img width="16" height="16" src="https://www.codester.com/static/uploads/categories/32/icon-alt.png" class="m-r-sm">
+		                  <span>Wordpress</span>
+		                </a></li>
+        </ul>
+    </div>
+   
+</div>
+</body>
+<script src="js/jquery-1.11.1.js"></script>
+<script src="js/bootstrap.js"></script>
+</html>

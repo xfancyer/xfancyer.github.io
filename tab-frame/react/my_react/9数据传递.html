@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>选项卡组件</title>
+</head>
+<script src="build/react.js" type="text/javascript" charset="utf-8"></script>
+<script src="build/react-dom.js" type="text/javascript" charset="utf-8"></script>
+<script src="build/browser.min.js" type="text/javascript" charset="utf-8"></script>
+<style>
+
+</style>
+<script src="build/react.js" type="text/javascript" charset="utf-8"></script>
+<script src="build/react-dom.js" type="text/javascript" charset="utf-8"></script>
+<script src="build/browser.min.js" type="text/javascript" charset="utf-8"></script>
+<script src="build/action.js"></script>
+
+<body>
+<div id="main"></div>
+
+<script type="text/babel">
+{/*
+	var App = React.createClass({
+		getInitialState:function(){
+			return{
+				value:1
+			}
+		},
+		changeValue:function(val){
+			this.setState({
+				value:val
+			})
+		},
+		render:function(){
+			return(
+				<div>
+					<p>{this.state.value}</p>
+					<button onClick={this.changeValue.bind(this,10)}>fu</button>
+					<Child childChangeValue={this.changeValue}/>
+				</div>
+			)
+		}
+	})
+	var Child = React.createClass({
+
+		handleClick:function(){
+			this.props.childChangeValue(20);
+
+		},
+		render:function(){
+			return(
+			<button onClick={this.handleClick}>zi</button>)
+		}
+	})
+	ReactDOM.render(<App/>,document.getElementById('main'))
+*/
+}
+
+//用组件设置的方法 Action 作为中间值 做了个转发操作
+
+var App = React.createClass({
+	getInitialState:function(){
+		return{
+			value:1
+		}
+	},
+	//注册一个方法，可以修改 this.state.value
+	componentWillMount:function(){
+		Action.on("changeAppValue",function(val){
+			this.setState({
+				value:val
+			})
+		}.bind(this))
+	},
+	render:function(){
+		return(
+			<div>
+				<p>{this.state.value}</p>
+				
+				<Child/>
+			</div>
+		)
+	}
+})
+var Child = React.createClass({
+	handleClick:function(){
+		Action.emit("changeAppValue",100)
+
+	},
+	render:function(){
+		return(
+		<button onClick={this.handleClick}>zi</button>)
+	}
+})
+ReactDOM.render(<App/>,document.getElementById('main'))
+
+
+
+</script>
+</body>
+</html>

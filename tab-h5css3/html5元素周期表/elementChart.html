@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<script src="jquery-3.1.1.min.js"></script>
+		<style>
+			*{margin:0;padding:0;}
+			:root{background:#000;}
+			#box{width:960px;height:630px;margin:20px auto;}
+			table{width:960px;height:470px;position:relative;}
+			
+			
+			td{width:52px;height:52px;display:inline-block;margin:1px 0 0 1px;font-size:12px;overflow:hidden;text-align:center;line-height:52px;border-radius:5px;}
+			.first{background:#81d183;}
+			.cols1{background:#6575d3;}
+			.cols2{background:#d1d157;}
+			.cols3{background:#d17d47;}
+			.cols4{background:#55d157;}
+			.cols5{background:#2f4ef8;}
+			.cols6{background:#f95d16;}
+			.cols7{background:#d1d1d3;}
+			.rows8{background:#d17dd3;}
+			
+			#tigs{width:960px;height:90px;margin-top:60px;}
+			dl{height:20px;width:120px;float:left;margin-top:5px;margin-left:100px;}
+			dt{width:20px;height:20px;border-radius:5px;float:left;}
+			dd{height:20px;width:90px;float:left;padding-left:10px;font-size:14px;color:#fff;line-height:20px;}
+			
+			.message{width:260px;padding-left:5px;height:136px;background:rgba(255,255,255,0.8);border-radius:5px;position:absolute;}
+			.message h2{height:40px;width:260px;line-height:40px;color:#f00;}
+			.message p{height:60px;width:260px;line-height:20px;font-size:12px;color:#333;}
+			.message h3{height:30px;line-height:30px;color:#f98b42;}
+			
+			
+		</style>
+	</head>
+	<body>
+		<div id="box">
+			<table id="tabs" cellpadding="0" cellspacing="0">
+				<tr>
+					<td class='first'>html</td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td class="cols6">col</td>
+					<td class="cols6">table</td>
+				</tr>
+				<tr>
+					<td class="cols1">head</td>
+					<td class="cols2">span</td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td class="cols3">div</td>
+					<td class="cols4">fieldset</td>
+					<td class="cols4">form</td>
+					<td class="cols5">body</td>
+					<td class="cols5">h1</td>
+					<td class="cols5">section</td>
+					<td class="cols6">colgroup</td>
+					<td class="cols6">tr</td>
+				</tr>
+				<tr>
+					<td class="cols1">title</td>
+					<td class="cols2">a</td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td class="cols3">pre</td>
+					<td class="cols4">meter</td>
+					<td class="cols4">select</td>
+					<td class="cols5">aside</td>
+					<td class="cols5">h2</td>
+					<td class="cols5">header</td>
+					<td class="cols6">caption</td>
+					<td class="cols6">td</td>
+				</tr>
+				<tr>
+					<td class="cols1">meta</td>
+					<td class="cols2">rt</td>
+					<td class="cols2">dfn</td>
+					<td class="cols2">em</td>
+					<td class="cols2">i</td>
+					<td class="cols2">small</td>
+					<td class="cols2">ins</td>
+					<td class="cols2">s</td>
+					<td class="cols3">br</td>
+					<td class="cols3">p</td>
+					<td class="cols3">blockquot</td>
+					<td class="cols4">legend</td>
+					<td class="cols4">optgroup</td>
+					<td class="cols5">address</td>
+					<td class="cols5">h3</td>
+					<td class="cols5">nav</td>
+					<td class="cols7">menu</td>
+					<td class="cols6">th</td>
+				</tr>
+				<tr>
+					<td class="cols1">base</td>
+					<td class="cols2">rp</td>
+					<td class="cols2">abbr</td>
+					<td class="cols2">time</td>
+					<td class="cols2">b</td>
+					<td class="cols2">strong</td>
+					<td class="cols2">del</td>
+					<td class="cols2">kbd</td>
+					<td class="cols3">hr</td>
+					<td class="cols3">ol</td>
+					<td class="cols3">dl</td>
+					<td class="cols4">label</td>
+					<td class="cols4">option</td>
+					<td class="cols4">datalist</td>
+					<td class="cols5">h4</td>
+					<td class="cols5">article</td>
+					<td class="cols7">command</td>
+					<td class="cols6">tbody</td>
+				</tr>
+				<tr>
+					<td class="cols1">link</td>
+					<td class="cols1">noscript</td>
+					<td class="cols2">q</td>
+					<td class="cols2">var</td>
+					<td class="cols2">sub</td>
+					<td class="cols2">mark</td>
+					<td class="cols2">bdi</td>
+					<td class="cols2">wbr</td>
+					<td class="cols3">figcaption</td>
+					<td class="cols3">ul</td>
+					<td class="cols3">dt</td>
+					<td class="cols4">input</td>
+					<td class="cols4">output</td>
+					<td class="cols4">keygen</td>
+					<td class="cols5">h5</td>
+					<td class="cols5">footer</td>
+					<td class="cols7">summary</td>
+					<td class="cols6">thead</td>
+				</tr>
+				<tr>
+					<td class="cols1">style</td>
+					<td class="cols1">script</td>
+					<td class="cols2">cite</td>
+					<td class="cols2">samp</td>
+					<td class="cols2">sup</td>
+					<td class="cols2">ruby</td>
+					<td class="cols2">bdo</td>
+					<td class="cols2">code</td>
+					<td class="cols3">figure</td>
+					<td class="cols3">li</td>
+					<td class="cols3">dd</td>
+					<td class="cols4">textarea</td>
+					<td class="cols4">button</td>
+					<td class="cols4">progress</td>
+					<td class="cols5">h6</td>
+					<td class="cols5">hgroup</td>
+					<td class="cols7">details</td>
+					<td class="cols6">tfoot</td>
+				</tr>
+				<tr>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td></td>
+				</tr>
+				<tr>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td class="rows8">img</td>
+					<td class="rows8">area</td>
+					<td class="rows8">map</td>
+					<td class="rows8">embed</td>
+					<td class="rows8">object</td>
+					<td class="rows8">param</td>
+					<td class="rows8">source</td>
+					<td class="rows8">iframe</td>
+					<td class="rows8">canvas</td>
+					<td class="rows8">track</td>
+					<td class="rows8">audio</td>
+					<td class="rows8">video</td>
+				</tr>
+			</table>
+			<div id="tigs">
+				<dl>
+					<dt class="first"></dt>
+					<dd>根元素</dd>
+				</dl>
+				<dl>
+					<dt class="cols2"></dt>
+					<dd>文本级别语意</dd>
+				</dl>
+				<dl>
+					<dt class="cols4"></dt>
+					<dd>表单</dd>
+				</dl>
+				<dl>
+					<dt class="cols6"></dt>
+					<dd>表格数据</dd>
+				</dl>
+				<dl>
+					<dt class="cols1"></dt>
+					<dd>元数据和脚本</dd>
+				</dl>
+				<dl>
+					<dt class="cols3"></dt>
+					<dd>组合内容</dd>
+				</dl>
+				<dl>
+					<dt class="cols5"></dt>
+					<dd>文档章节</dd>
+				</dl>
+				<dl>
+					<dt class="cols7"></dt>
+					<dd>交互元素</dd>
+				</dl>
+				<dl>
+					<dt class="rows8"></dt>
+					<dd>嵌入式内 </dd>
+				</dl>
+			</div>
+		</div>
+		<!--<div class="message">
+			<h2>&lt;i&gt;</h2>
+			<p>Text in a alternate voice or mood, such as a technical term.<br>斜体的文本</p>
+			<h3>Mozilla,W3C Reference</h3>
+		</div>-->
+	</body>
+	<script>
+		$(function(){
+			
+			
+			$('td[class]').hover(function(){
+				//console.log($(this).position().left)
+				//alert($('td[class]').length)         //107
+				//每次鼠标移入先判断是否存在$('.message'),存在就先删除;
+				if($('.message')){
+					$('.message').remove();
+				}
+				
+				//获取鼠标移入的td的left和top值;
+				var lefts=$(this).position().left;
+				var tops=$(this).position().top+55;
+				
+				//index里面传参数;(jq的选择器) 记着不要加 $( )  ,直接写括号里面的内容;
+				var index=$(this).index( 'td[class]' );
+				
+				//console.log(index)
+				$.ajax({
+					type:"get",
+					url:"data.json",
+					async:true,
+					success:function(msg){
+						
+						var str=$(
+							'<div class="message">'+
+								'<h2>'+msg.list[index].name+'</h2>'+
+								'<p>'+msg.list[index].about+'</p>'+
+								'<h3>Mozilla,W3C Reference</h3>'+
+							'</div>'
+						)
+						$('#tabs').append(str);
+						$('.message').css({"left":lefts+'px',"top":tops+'px'})
+					}
+				});
+				
+			},function(){
+				$('.message').remove();
+			})
+		})
+	</script>
+	
+	
+	
+	
+</html>

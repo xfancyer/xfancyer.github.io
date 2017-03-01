@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>选项卡组件</title>
+</head>
+<script src="build/react.js" type="text/javascript" charset="utf-8"></script>
+<script src="build/react-dom.js" type="text/javascript" charset="utf-8"></script>
+<script src="build/browser.min.js" type="text/javascript" charset="utf-8"></script>
+
+<body>
+<div id="main"></div>
+<!-- 
+	思路:
+	1- 模拟后台传递的数据
+	2- 分析组件,基本组件周期搭建
+		ListWrap=>List->button 
+	3- 属性、状态、自定义方法
+	4- 难点:
+		.map(function(ele,ind){})
+		Object.key[键值对对象名]
+		.bind(this,index)
+	5- 
+ -->
+
+<script type="text/babel">
+var productData={
+	"热卖商品":["热卖1","热卖2","热卖3","热卖4","热卖5","热卖6"],
+	"最新商品":["新品1","新品2","新品3","新品4","新品5","新品6"],
+	"好评商品":["好评1","好评2","好评3","好评4","好评5","好评6"]
+}
+var ListWrap = React.createClass({
+	getInitialState:function(){
+		//var types = Object.keys(this.props.productData)
+		var types = [];
+		for(var attr in this.props.productData){
+			types.push(attr)
+		}
+		return {
+			types:types,
+			selectedType:types[0]
+		}
+	},
+	changeSelectedType:function(index){
+		this.setState({
+			selectedType:this.state.types[index]
+		})
+	},
+	render:function(){
+		var nowTypeData = this.props.productData[this.state.selectedType];
+		return (
+			<div className="wrap">
+				<div className="type-list">
+					{
+						this.state.types.map(function(ele,index){
+							return <button onClick={this.changeSelectedType.bind(this,index)} key={index}>{ele}</button> 
+						}.bind(this))
+					}
+				</div>
+				<List listData={nowTypeData}/>
+				
+			</div>
+		)
+	}
+})
+var List = React.createClass({
+	getDefaultProps:function(){
+		//给他一个容错空间 
+		return {
+			//["热卖1","热卖2","热卖3","热卖4","热卖5","热卖6"]
+			listData:[]
+		}
+	},
+	render:function(){
+		return(
+			<ul className="produce-list">
+				{
+					this.props.listData.map(function(ele,index){
+						return <li key={index}>{ele}</li>
+					})
+				}
+			</ul>	
+		)
+	}
+})
+
+
+ReactDOM.render(<ListWrap productData={productData}/>,document.getElementById('main'));
+
+	
+</script>
+</body>
+</html>

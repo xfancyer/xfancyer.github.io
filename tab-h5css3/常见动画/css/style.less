@@ -1,0 +1,244 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+li{
+    list-style:none;
+}
+
+//给所有figure中的img添加动画事件 移入时变换透明度和位置
+//transition:all 1s;figure:hover img{transform:translateX(-15px);}
+figure {
+  width: 33.3%;
+  height: 365px;
+  float: left;
+  overflow: hidden;
+  position: relative;
+  img {
+      height:100%;
+      display:inline-block;
+      position:relative;
+      transition: all 1s;
+      z-index:-1;
+      
+    }
+}
+figure:hover img{
+    transform:translateX(-15px);
+    opacity:0.5;
+}
+
+//!!!统一设置相关元素的过渡变化
+div,h2,span,li,p{
+    position:absolute;
+    transition:all 1s;
+    color:#fff
+}
+
+//effect1 动画效果
+//给h2一个向下移动的效果
+.effect1 {
+  h2{
+    position:absolute;
+    bottom:65px;
+    width:100%;
+    text-align:center;
+    color:#fff;
+    transition:all 1s;
+  }
+  p{
+      position:absolute;
+      color:#fff;
+      top:100%;
+      left:10%;
+  }
+}
+.effect1:hover h2{
+    transform:translateY(15px);
+}
+.effect1:hover p{
+    top:90%;
+}
+
+//.effect1
+.effect2{
+    h2{
+        top:24%;
+        left:10%;
+    }
+    ul{
+        position:absolute;
+        top:0;left:0;
+        li{
+            position:relative;
+            left:0;
+            width:100%;
+            transform:translateX(-100%);
+            transition:0.5s all;
+        }
+        li:nth-child(1){
+            top:200px;
+           
+        }
+        li:nth-child(2){
+            top:230px;
+            transition-delay: 0.3s;
+        }
+        li:nth-child(3){
+            top:260px;
+            transition-delay: 0.8s;
+        }
+    }
+}
+.effect2:hover ul li{
+    transform:translateX(10%)
+}
+
+//effect3
+.effect3{
+    h2{
+        top:10%;
+        left:10%;
+    }
+    p{
+        bottom:-10%;
+        
+    }
+}
+.effect3:hover p{
+    bottom:0;
+}
+
+//effect4
+//底部三角动画
+.effect4{
+    div{
+        width:150%;height:80px;
+        background:cornflowerblue;
+        transform-origin: 30% top; 
+        bottom:-80px;
+        transform:rotate(0);
+    }
+    ul{
+        li{
+            float:right;
+            position:relative;
+            bottom:0;
+            right:0;
+            transform:translateY(0);
+        }
+    }
+}
+.effect4:hover div{
+    transform:rotate(-25deg);
+}
+.effect4:hover ul li{
+    transform:translateY(-50px);
+}
+
+//effect5
+//选装飞入
+.effect5{
+    h2{
+        left:0;
+        top:20%;
+    }   
+    p{
+        top:30%;
+    }
+    div{
+        border:2px solid #FF6666;
+        width:70%;
+        height:60%;
+        left:15%;
+        top:-63%;
+    }
+}
+.effect5:hover p{
+    transform:translateX(50px);
+}
+.effect5:hover div{
+    transform:rotate(720deg);
+    top:15%;
+}
+
+//effect6
+.effect6{
+    h2{
+        top:10%;
+        transform:skew(90deg)
+    }
+    p{
+        top:17%;
+        transform:skew(-90deg);
+        
+    }
+}
+.effect6:hover p{
+    transform:skew(0);
+    
+}
+.effect6:hover h2{
+    transform:skew(0);
+}
+
+.effect7{
+    img{
+        transform:scale(1.2);
+    }
+    div{
+        transform:scale(1.2);
+        border:2px solid #ff6;
+        top:10%;
+        height:60%;
+        width:60%;
+        left:20%;
+    }
+    h2{
+       transform:scale(1.2);
+       top:15%;
+       left:10%;
+    }
+    p{
+       transform:scale(1.2);
+       top:40%;
+    }
+}
+.effect7:hover img{
+    transform:scale(1);
+}
+.effect7:hover div{
+    transform:scale(0.9);
+}
+.effect7:hover p{
+    transform:scale(0.8);
+}
+
+//.effect8
+//绘制线条
+.effect8{
+    .borderW{
+        width:70%;
+        height:60%;
+        top:20%;
+        left:15%;
+        transform:scale(0,1);
+        border-top:2px solid #FF6666;
+        border-bottom:2px solid #FF6666;
+    }
+    .borderH{
+        width:50%;
+        height:80%;
+        top:10%;
+        left:25%;
+        transform:scale(1,0);
+        border-left:2px solid #FF6666;
+        border-right:2px solid #FF6666;
+    }
+}
+.effect8:hover .borderW{
+    transform:scale(1,1);
+}
+.effect8:hover .borderH{
+    transform:scale(1,1);
+}

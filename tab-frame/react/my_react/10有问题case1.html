@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>切换下拉菜单</title>
+</head>
+<script src="build/react.js" type="text/javascript" charset="utf-8"></script>
+<script src="build/react-dom.js" type="text/javascript" charset="utf-8"></script>
+<script src="build/browser.min.js" type="text/javascript" charset="utf-8"></script>
+
+<script src="build/react.js" type="text/javascript" charset="utf-8"></script>
+<script src="build/react-dom.js" type="text/javascript" charset="utf-8"></script>
+<script src="build/browser.min.js" type="text/javascript" charset="utf-8"></script>
+<script src="build/react-with-addons.js"></script>
+
+<body>
+<div id="main"></div>
+
+<script type="text/babel">
+{/*
+var Select = React.createClass({
+	//propTypes:{
+	//	selectData:React.PropTypes.array.isRequired,
+	//	str:React.PropTypes.string.isRequired
+	//},
+	getInitialState:function(){
+		return {
+			show:false,
+			selectedIndex:0
+		}
+	},
+	titClick:function(){
+		this.setState({
+			show:!this.state.show
+		})
+	},
+	selectChange:function(index){
+		this.props.fnChange(index)
+		this.setState({
+			this.props.fnChange(index);
+			this.setState({
+				selectedIndex:index,
+				show:false
+			})
+		})
+	},
+	render:function(){
+		var listStype = {"display":this.state.show?"block":"none"};
+		return (
+			<div className="select-wrap">
+				<h3 onClick={this.titClick} className={this.state.show?"block":"none"></h3>					
+				<ul style={listStyle} className="select-list">
+					{
+						this.props.selectData.map(function(ele,index){
+							return <li onClick={this.selectChange.bind(this,index)}></li>
+						}.bind(this))
+					}
+				</ul>
+			</div>
+		)
+	}
+})
+var SelectCont = React.createClass({
+	getInitialState:function(){
+		return {
+			titleData:[],
+			selectIndex:0
+		}
+	},
+	componentWillMount:function){
+		this.setState({
+			titleData:this.props.selectData.map(function(ele,index){
+				return ele.title
+			})
+		})
+	},
+	changeIndex:function(index){
+		this.setState({
+			selectedIndex:index
+		})
+	},
+	render:function(){
+		return (
+			<div>
+				<Select fnChange={this.changeIndex} selectData={this.state.titleData} str="222"/>
+				<div className="cont">
+					{this.props.selectData[this.state.selectedIndex].cont}
+				</div>
+			</div>
+		)
+	}
+
+})
+*/}
+
+var selectData = [
+	{
+		"title":"react",
+		"cont":"react是一个js框架，虚拟dom,组件化开发，单项数据流，声明周期"
+	},
+	{
+		"title":"react Native", 
+		"cont":"react Native 可以使用js 开发native app的框架"
+	},
+	{
+		"title":"angular",
+		"cont":"angular ~"
+	}
+]
+
+
+
+var Select = React.createClass({
+	//propType:{
+	//	selectData:React.PropTypes.array.isRequired,
+	//	str:React.PropTypes.string.isRequired
+	//},
+	getInitialState:function(){
+		//设置默认状态
+		return {
+			show:false,
+			selectedIndex:0
+		}
+	},
+	titClick:function(){
+		//点击时显示隐藏切换
+		this.setState({
+			show:!this.state.show
+		})
+	},
+	selectChange:function(index){
+		//修改selectedIndex,变成点击的li的下标index
+		//让下拉列表消失
+		this.props.fnChange(index);
+		this.setState({
+			selectedIndex:index,
+			show:false
+		})
+	},
+	render:function(){
+		var listStyle ={"display":this.state.show?"black":"none"}
+		console.log(this.props.selectData[this.state.selectedIndex]) //undefined
+
+		return(
+			<div className="select-wrap">
+				<h3 onClick={this.titClick} className={this.state.show?"select-show":""}>
+					{this.props.selectData[this.state.selectedIndex]}
+				</h3>
+				<ul style={listStyle} className="select-list">
+					{
+						this.props.selectData.map(function(ele,index){
+							return <li onClick={this.selectChange.bind(this,index)}>
+								{ele}
+							</li>
+						}.bind(this))
+					}
+				</ul>
+			</div>
+		)
+	}
+
+})
+
+var SelectCont = React.createClass({
+	getInitialState:function(){
+		return {
+			titleData:[],
+			selectedIndex:0
+		}
+	},
+	componentWillMount:function(){
+		//在组件即将渲染的时候，通过props.selectData修改titleData
+		
+		this.setState({
+			titleData:this.props.selectData.map(function(ele,index){
+				
+				return ele.title
+				
+			})
+		})
+	},
+	changeIndex:function(index){
+		this.setState({
+			selectedIndex:index
+		})	
+	},
+	render:function(){
+		console.log(this.state.selectedIndex);
+		return (
+			<div>
+				<Select fnChange={this.changeIndex} selectData={this.state.titleData} str="222"/>
+				<div className="cont">
+					{this.props.selectData[this.state.selectedIndex].cont}
+				</div>
+			</div>	
+		)	
+	},
+	componentDidMount:function(){
+		//this.changeIndex(2)
+		console.log('componentDidMount')
+	}
+})
+ReactDOM.render(<SelectCont selectData={selectData}/>,document.getElementById('main'))
+
+<!-- 
+ReactDOM.render(): Invalid component element. This may be caused by unintentionally loading two independent copies of React.
+ -->
+var a=2   var a=3 alert（a）
+{/*
+	<SelectCont/>
+		<Select/>
+	1-将数据通过属性(selectData)的方式传给<SelectCont/>
+	2-有标题+内容 标题重新定义为组件
+	3-通过this.props.selectData.map(funtion(){})//可以遍历出相关的数据 定义变量 传递数据(titleData,titleIndex)
+		**这里用到了模拟双向数据绑定
+		  ·子组件触发自定义方法
+		  ·通过设置props 回调 触发父组件自定义方法changeIndex  fnChange={this.changeIndex} 状态改变
+		  状态 selectedIndex发生改变 相应的selectedIndex有关的数据发生改变
+		  
+	4-
+*/}
+</script>
+</body>
+</html>

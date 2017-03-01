@@ -1,0 +1,12 @@
+module.exports={
+	entry:"./js/app.js",
+	output:{
+		path:__dirname,
+		filename:"app.js"
+	},
+	module:{
+		loaders:[
+			{test:/\.js$/,loader:"jsx-loader"}
+		]
+	}
+}

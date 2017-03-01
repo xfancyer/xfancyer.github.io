@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>属性传递</title>
+</head>
+<script src="build/react.js" type="text/javascript" charset="utf-8"></script>
+<script src="build/react-dom.js" type="text/javascript" charset="utf-8"></script>
+<script src="build/browser.min.js" type="text/javascript" charset="utf-8"></script>
+
+<body>
+<div id="main"></div>
+
+<script type="text/babel">
+var listData = ['小红','aa','bb'];
+
+	var List = React.createClass({
+		getDefaultProps:function(){
+			//创建组件的时候执行
+			console.log('getDefaultProps');
+			return {
+				listData:[]
+			}
+		},
+		getInitialState:function(){
+			console.log('getInitialState')
+			return {
+				listShow:true
+			}
+		},
+		changeStyle:function(){
+			console.log('changeStyle')
+			this.setState({
+				listShow:!this.state.listShow
+			})
+		},
+		render:function(){
+			console.log('render')	
+					
+			var listStyle = {"display":this.state.listShow?"block":"none"}
+			var btnHtml = this.state.listShow?"显示":"隐藏"
+			return(
+				<div>
+					<button onClick={this.changeStyle}>{btnHtml}</button>
+					<ul style={listStyle}>
+						{
+							this.props.listData.map(function(ele,index){
+								return <li key={index}>{ele}</li>
+							})
+						}
+					</ul>
+				</div>
+			)
+		}
+	})
+	ReactDOM.render(<List listData={listData}/>,document.getElementById('main'));
+
+	
+</script>
+</body>
+</html>

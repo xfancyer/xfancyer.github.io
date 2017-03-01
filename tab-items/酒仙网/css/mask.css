@@ -1,0 +1,20 @@
+#box {position:relative;width:440px;height:440px; z-index:5}
+#box ul{overflow: hidden;width:403px; padding-left:37px; margin-top:8px}
+#box li {float: left;border-top:none;}
+.small{width:420px;height:420px;background:#000; padding:10px;}
+.small img{position:absolute;top:0;left:0; width: 440px; height: 440px;}
+#bottom li{width:60px; border:2px solid #fff; margin:0 6px;}
+#bottom li a{}
+#bottom li img{ width: 54px; height: 54px; padding:3px;}
+#big{width:440px;height:440px;border:1px solid #ccc;overflow:hidden;position:absolute;top:0;left:440px;display:none;}
+#mask{width:100px;height:100px;background:#fede4f; border:#aaa 1px solid;opacity:0.4;position:absolute;top:0;left:0;display:none; z-index:3;}
+.bigImage{position:absolute;top:0;left:0;}
+#small{position:relative;cursor:move;}
+
+.baokuai{ position:absolute; top:0; left:10px; width:50px; height:60px; border-radius:0 0 50px 50px; z-index:2; background:#c33; text-align:center; color:#fff; line-height:50px; font-size:14px;}
+
+.fadajing{ width:1198px; border:1px solid #f2f2f2;}
+.fada_left{ height:570px; float:left;}
+.xq_left{ position:absolute; bottom:-53px; left:14px;}		
+.xq_right{ position:absolute; bottom:-53px; right:0;}	
+.miaoshu{font-size: 14px;}		 	 

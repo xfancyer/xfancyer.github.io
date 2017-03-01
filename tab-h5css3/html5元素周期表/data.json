@@ -1,0 +1,540 @@
+{
+	"list":[
+		{
+			"id":"1",
+			"name":"&lt;html&gt;",
+			"about":"Document root element.<br>文档根元素"
+		},
+		{
+			"id":"2",
+			"name":"&lt;col&gt;",
+			"about":"Columns in a table.<br>表格中的列"
+		},
+		{
+			"id":"3",
+			"name":"&lt;table&gt;",
+			"about":"Table of multi-dimensional data.<br>表格"
+		},
+		{
+			"id":"4",
+			"name":"&lt;head&gt;",
+			"about":"First element of the HTML document. Contains document metadata.<br>HTML文档中的第一个元素。包含文档元数据"
+		},
+		{
+			"id":"5",
+			"name":"&lt;span&gt;",
+			"about":"Container with no semantic meaning.<br>无语义的容器"
+		},
+		{
+			"id":"6",
+			"name":"&lt;div&gt;",
+			"about":"Container with no semantic meaning.<br>无语义的容器"
+		},
+		{
+			"id":"7",
+			"name":"&lt;fieldset&gt;",
+			"about":"Set of form controls grouped by theme.<br>按用途组合的一组表单控制元素"
+		},
+		{
+			"id":"8",
+			"name":"&lt;form&gt;",
+			"about":"Form.<br>表单"
+		},
+		{
+			"id":"9",
+			"name":"&lt;body&gt;",
+			"about":"Document content.<br>文档的主体"
+		},
+		{
+			"id":"10",
+			"name":"&lt;h1&gt;",
+			"about":"Heading for the current section.<br>当前章节的标题"
+		},
+		{
+			"id":"11",
+			"name":"&lt;section&gt;",
+			"about":"Contains elements grouped by theme, for example a chapter or tab box.<br>包含同主题一组元素的容器，例如文档的章节"
+		},
+		{
+			"id":"12",
+			"name":"&lt;colgroup&gt;",
+			"about":"Defines a group of columns in a table.<br>对表格中的若干列进行组合"
+		},
+		{
+			"id":"13",
+			"name":"&lt;tr&gt;",
+			"about":"A row of cells.<br>表格中的一行单元"
+		},
+		{
+			"id":"14",
+			"name":"&lt;title&gt;",
+			"about":"Document title.<br>文档标题"
+		},
+		{
+			"id":"15",
+			"name":"&lt;a&gt;",
+			"about":"Hyperlink.<br>超链接"
+		},
+		{
+			"id":"16",
+			"name":"&lt;pre&gt;",
+			"about":"Text that is preformatted in the HTML code.<br>在HTML代码中预先格式化的文本"
+		},
+		{
+			"id":"17",
+			"name":"&lt;meter&gt;",
+			"about":"Control for entering a numeric value in a known range.<br>控制在已知范围内输入度量值"
+		},
+		{
+			"id":"18",
+			"name":"&lt;select&gt;",
+			"about":"Control for selecting from multiple options.<br>有多选值的下拉列表"
+		},
+		{
+			"id":"19",
+			"name":"&lt;aside&gt;",
+			"about":"Content related to surrounding elements that doesn't belong inline, such as a advertising or quotes.<br>与周围元素相关的内容，但分开显示"
+		},
+		{
+			"id":"20",
+			"name":"&lt;h2&gt;",
+			"about":"Heading for the current section.<br>当前章节的标题"
+		},
+		{
+			"id":"21",
+			"name":"&lt;header&gt;",
+			"about":"Navigation or introductory elements for the current section.<br>当前章节的导航或引导性元素"
+		},
+		{
+			"id":"22",
+			"name":"&lt;caption&gt;",
+			"about":"Title of a table.<br>表格的标题"
+		},
+		{
+			"id":"23",
+			"name":"&lt;td&gt;",
+			"about":"Table cell.<br>表格单元格"
+		},
+		{
+			"id":"24",
+			"name":"&lt;meta&gt;",
+			"about":"Document metadata that can't be represented with other elements.<br>文档的元数据"
+		},
+		{
+			"id":"25",
+			"name":"&lt;rt&gt;",
+			"about":"Annotation of preceding text.<br>文本的解释"
+		},
+		{
+			"id":"26",
+			"name":"&lt;dfn&gt;",
+			"about":"Term being defined by the parent section.<br>由父级章节定义的项"
+		},
+		{
+			"id":"27",
+			"name":"&lt;em&gt;",
+			"about":"Text that should be emphasised.<br>需要强调的文本"
+		},
+		{
+			"id":"28",
+			"name":"&lt;i&gt;",
+			"about":"Text in a alternate voice or mood, such as a technical term.<br>斜体的文本"
+		},
+		{
+			"id":"29",
+			"name":"&lt;small&gt;",
+			"about":"An aside, such as fine print.<br>更小的旁注信息"
+		},
+		{
+			"id":"30",
+			"name":"&lt;ins&gt;",
+			"about":"Text that has been inserted during document editing.<br>在文档编辑过程中插入的文本"
+		},
+		{
+			"id":"31",
+			"name":"&lt;s&gt;",
+			"about":"Text that is outdated or no longer accurate.<br>失效或不再准确的文本"
+		},
+		{
+			"id":"32",
+			"name":"&lt;br&gt;",
+			"about":"Line break.<br>换行符"
+		},
+		{
+			"id":"33",
+			"name":"&lt;p&gt;",
+			"about":"Paragraph content.<br>段落内容"
+		},
+		{
+			"id":"34",
+			"name":"&lt;blockquote&gt;",
+			"about":"Quote from another source.<br>从其它源引用的内容"
+		},
+		{
+			"id":"35",
+			"name":"&lt;legend&gt;",
+			"about":"Define a name for a fieldset.<br>图例或表的说明"
+		},
+		{
+			"id":"36",
+			"name":"&lt;optgroup&gt;",
+			"about":"Group of option.<br>选项组"
+		},
+		{
+			"id":"37",
+			"name":"&lt;address&gt;",
+			"about":"Contact information for the current article.<br>当前文章的联系信息"
+		},
+		{
+			"id":"38",
+			"name":"&lt;h3&gt;",
+			"about":"Heading for the current section.<br>当前章节的标题"
+		},
+		{
+			"id":"39",
+			"name":"&lt;nav&gt;",
+			"about":"Contains a collection of links.<br>导航链接的容器"
+		},
+		{
+			"id":"40",
+			"name":"&lt;menu&gt;",
+			"about":"Set of commands.<br>菜单列表"
+		},
+		{
+			"id":"41",
+			"name":"&lt;th&gt;",
+			"about":"Table heading.<br>表头"
+		},
+		{
+			"id":"42",
+			"name":"&lt;base&gt;",
+			"about":"Specifies URL which non-absolute URLs are relative to.<br>定义非绝对的链接地址所相对的默认 URL"
+		},
+		{
+			"id":"43",
+			"name":"&lt;rp&gt;",
+			"about":"Contains semantically meaningless markup for browsers that don't understand ruby annotations.<br>针对不支持ruby 注音的浏览器，用于注释信息"
+		},
+		{
+			"id":"44",
+			"name":"&lt;abbr&gt;",
+			"about":"Abbreviation or acronym.<br>缩写或缩略词"
+		},
+		{
+			"id":"45",
+			"name":"&lt;time&gt;",
+			"about":"Time defined in a machine readable format.<br>时间"
+		},
+		{
+			"id":"46",
+			"name":"&lt;b&gt;",
+			"about":"Stylistically separated text of equal importance, such as a product name.<br>粗体文本，用于强调"
+		},
+		{
+			"id":"47",
+			"name":"&lt;strong&gt;",
+			"about":"Text that is important.<br>重要的文本"
+		},
+		{
+			"id":"48",
+			"name":"&lt;del&gt;",
+			"about":"Text that has been removed during document editing.<br>在编辑过程中被删除的文本"
+		},
+		{
+			"id":"49",
+			"name":"&lt;kbd&gt;",
+			"about":"Example input (usually keyboard) for a program.<br>由键盘输入的文本"
+		},
+		{
+			"id":"50",
+			"name":"&lt;hr&gt;",
+			"about":"Thematic break within a paragraph.<br>水平线/内容主题的变化"
+		},
+		{
+			"id":"51",
+			"name":"&lt;ol&gt;",
+			"about":"Ordered list.<br>有序列表"
+		},
+		{
+			"id":"52",
+			"name":"&lt;dl&gt;",
+			"about":"List of term-description pairs.<br>带定义的列表"
+		},
+		{
+			"id":"53",
+			"name":"&lt;label&gt;",
+			"about":"Caption for a form control.<br>表单控件的标题（标签）"
+		},
+		{
+			"id":"54",
+			"name":"&lt;option&gt;",
+			"about":"Single option within a select control.<br>下拉列表中的单一选项"
+		},
+		{
+			"id":"55",
+			"name":"&lt;datalist&gt;",
+			"about":"Define sets of options.<br>定义选项列表"
+		},
+		{
+			"id":"56",
+			"name":"&lt;h4&gt;",
+			"about":"Heading for the current section.<br>当前章节的标题"
+		},
+		{
+			"id":"57",
+			"name":"&lt;article&gt;",
+			"about":"Section of the page content, such as a blog or forum post.页面内容的独立部分，如博客文章、论坛帖子"
+		},
+		{
+			"id":"58",
+			"name":"&lt;command&gt;",
+			"about":"Command the user can perform, such as publishing an article.<br>用户可以执行的命令，如发表一篇文章"
+		},
+		{
+			"id":"59",
+			"name":"&lt;tbody&gt;",
+			"about":"Contains rows that hold the table's data.<br>表格主体"
+		},
+		{
+			"id":"60",
+			"name":"&lt;link&gt;",
+			"about":"Other resources related to the document.<br>与文档相关的其它资源"
+		},
+		{
+			"id":"61",
+			"name":"&lt;noscript&gt;",
+			"about":"Contains elements that are part of the document only if scripting is disabled.<br>当脚本被禁用时显示的一部分文档内容"
+		},
+		{
+			"id":"62",
+			"name":"&lt;q&gt;",
+			"about":"Quoted text.<br>引用的文本"
+		},
+		{
+			"id":"63",
+			"name":"&lt;var&gt;",
+			"about":"Mathematical or programming variable.<br>数学或程序变量"
+		},
+		{
+			"id":"64",
+			"name":"&lt;sub&gt;",
+			"about":"Subscript text.<br>上标"
+		},
+		{
+			"id":"65",
+			"name":"&lt;mark&gt;",
+			"about":"Text highlighted for referencing elsewhere.<br>突出显示的文本"
+		},
+		{
+			"id":"66",
+			"name":"&lt;bdi&gt;",
+			"about":"Text that is separated from directional formatting of its surroundings.<br>从周围内容分开，而设置不同的文本方向"
+		},
+		{
+			"id":"67",
+			"name":"&lt;wbr&gt;",
+			"about":"Opportunity for a line break.<br>软回车（必要时才回车）"
+		},
+		{
+			"id":"68",
+			"name":"&lt;figcaption&gt;",
+			"about":"Caption for a figure.<br>图片的标题，图题"
+		},
+		{
+			"id":"69",
+			"name":"&lt;ul&gt;",
+			"about":"Unordered list.<br>无序列表"
+		},
+		{
+			"id":"70",
+			"name":"&lt;dt&gt;",
+			"about":"Term which will be described.<br>带定义的列表中的项目"
+		},
+		{
+			"id":"71",
+			"name":"&lt;input&gt;",
+			"about":"Generic form input.<br>表单中的输入字段"
+		},
+		{
+			"id":"72",
+			"name":"&lt;outputl&gt;",
+			"about":"Contains the results of a calculation.<br>输出的结果"
+		},
+		{
+			"id":"73",
+			"name":"&lt;keygen&gt;",
+			"about":"Generates private-public key pairs.<br>生成密钥对"
+		},
+		{
+			"id":"74",
+			"name":"&lt;h5&gt;",
+			"about":"eading for the current section.<br>当前章节的标题"
+		},
+		{
+			"id":"75",
+			"name":"&lt;footer&gt;",
+			"about":"Footer of the current section.<br>当前章节的页脚"
+		},
+		{
+			"id":"76",
+			"name":"&lt;summary&gt;",
+			"about":"Caption of a details element.<br>dedails元素的标题"
+		},
+		{
+			"id":"77",
+			"name":"&lt;thead&gt;",
+			"about":"Contains rows with table headings.<br>表格中的表头行"
+		},
+		{
+			"id":"78",
+			"name":"&lt;style&gt;",
+			"about":"Styling defined inline data.<br>在文档中定义的样式"
+		},
+		{
+			"id":"79",
+			"name":"&lt;script&gt;",
+			"about":"Inline or linked client side scripts.<br>内部或外部链接的脚本"
+		},
+		{
+			"id":"80",
+			"name":"&lt;cite&gt;",
+			"about":"Title of a referenced piece of work.<br>对参考文献等的引用"
+		},
+		{
+			"id":"81",
+			"name":"&lt;samp&gt;",
+			"about":"Sample output of a program.<br>程序的样本"
+		},
+		{
+			"id":"82",
+			"name":"&lt;sup&gt;",
+			"about":"Superscript text.<br>下标"
+		},
+		{
+			"id":"83",
+			"name":"&lt;ruby&gt;",
+			"about":"Contains text with annotations, such as pronounciation hints. Commonly used in East Asian text.<br>东亚文字的注音，如中文的拼音"
+		},
+		{
+			"id":"84",
+			"name":"&lt;bdo&gt;",
+			"about":"Defines directional formatting for content.<br>定义内容的排版方向"
+		},
+		{
+			"id":"85",
+			"name":"&lt;code&gt;",
+			"about":"Fragment of code.<br>代码的片断"
+		},
+		{
+			"id":"86",
+			"name":"&lt;figure&gt;",
+			"about":"Contains elements related to single concept, such as an illustration or code example.<br>独立的内容，如图像、代码等"
+		},
+		{
+			"id":"87",
+			"name":"&lt;li&gt;",
+			"about":"List item.<br>列表项目"
+		},
+		{
+			"id":"88",
+			"name":"&lt;dd&gt;",
+			"about":"Description for the preceding term.<br>带定义列表中对项目的描述"
+		},
+		{
+			"id":"89",
+			"name":"&lt;textarea&gt;",
+			"about":"Multiline free-form text input.<br>多行的文本输入区域"
+		},
+		{
+			"id":"90",
+			"name":"&lt;button&gt;",
+			"about":"A button.<br>按钮"
+		},
+		{
+			"id":"91",
+			"name":"&lt;progress&gt;",
+			"about":"Control for displaying progress of a task.<br>运行中的进度控制"
+		},
+		{
+			"id":"92",
+			"name":"&lt;h6&gt;",
+			"about":"Heading for the current section.<br>当前章节的标题"
+		},
+		{
+			"id":"93",
+			"name":"&lt;hgroup&gt;",
+			"about":"Collection of headings for the current section. The highest ranked heading represents the group in the document outline.<br>当前章节各标题的组合"
+		},
+		{
+			"id":"94",
+			"name":"&lt;details&gt;",
+			"about":"Contains additional information, such as the contents of an accordian view.<br>附加的详细信息"
+		},
+		{
+			"id":"95",
+			"name":"&lt;tfoot&gt;",
+			"about":"Contains rows with summary of data.<br>表格的页脚/脚注行"
+		},
+		{
+			"id":"96",
+			"name":"&lt;img&gt;",
+			"about":"An image.<br>图像"
+		},
+		{
+			"id":"97",
+			"name":"&lt;area&gt;",
+			"about":"Hyperlink area in an image map.<br>图像映射的超链接区域"
+		},
+		{
+			"id":"98",
+			"name":"&lt;map&gt;",
+			"about":"Image map for adding hyperlinks to parts of an image.<br>在图像的一部分区域定义图像映射用于添加超链接"
+		},
+		{
+			"id":"99",
+			"name":"&lt;embed&gt;",
+			"about":"Reference to non-HTML content.<br>嵌入的非HTML内容"
+		},
+		{
+			"id":"100",
+			"name":"&lt;object&gt;",
+			"about":"External resource such as an image, iframe or plugin.<br>嵌入的外部资源，如图像、iframe或插件"
+		},
+		{
+			"id":"101",
+			"name":"&lt;param&gt;",
+			"about":"Parameters for the parent object.<br>父级对象的参数"
+		},
+		{
+			"id":"102",
+			"name":"&lt;source&gt;",
+			"about":"Alternative sources for parent video or audio elements.<br>父级视频或音频元素的资源"
+		},
+		{
+			"id":"103",
+			"name":"&lt;iframe&gt;",
+			"about":"Nested browser frame.<br>嵌套的框架"
+		},
+		{
+			"id":"104",
+			"name":"&lt;canvas&gt;",
+			"about":"Bitmap which is editable by client side scripts.<br>可以通过客户端脚本编辑的图形（画布）"
+		},
+		{
+			"id":"105",
+			"name":"&lt;track&gt;",
+			"about":"Specifies external timing track for media elements.<br>媒体类元素的外部轨道"
+		},
+		{
+			"id":"106",
+			"name":"&lt;audio&gt;",
+			"about":"Audio file.<br>音频文件"
+		},
+		{
+			"id":"107",
+			"name":"&lt;video&gt;",
+			"about":"Video.<br>视频s"
+		}
+		
+	]
+}

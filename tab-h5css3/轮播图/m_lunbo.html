@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<script src="../../js/jquery-1.11.3.js" type="text/javascript" charset="utf-8"></script>
+		<style type="text/css" id="style">
+		
+			*{padding: 0;margin: 0;}
+			ul,li{list-style: none;}
+			#box{
+				width: 1200px;
+				height: 360px;
+				position: relative;
+				margin: 100px auto;
+			}
+			.list{
+				position:absolute;
+				width:800px;height:360px;
+				perspective:800px;
+				perspective-origin:right
+				
+			}
+			.list li{
+				width:100px;
+				height:360px;
+				transform-style:preserve-3d;
+				float:left;
+				border:1px solid #0000FF
+				transform:rotateX(0deg);
+				opacity:0.8;
+				transform-origin:center center -180px;
+			}
+			.list li a{
+				display:block;
+				width:100px;height:360px;
+				position:absolute;
+			}
+			.list li a:nth-child(1){
+
+			}
+			.list li a:nth-child(2){
+				transform-origin:bottom;
+				top: -360px;
+				transform:rotateX(90deg);
+				
+			}
+			.list li a:nth-child(3){
+				transform:rotateX(180deg) translateZ(360px)
+			}
+			.list li a:nth-child(4){
+				transform:rotateX(90deg);
+				transform-origin: bottom;
+			}
+			#btn{
+				position:relative;
+				top:400px;
+			}
+			#btn li{
+				float:left;
+				width:50px;height:50px;
+				background:#000;
+				color:#fff;
+				border-radius:50%;
+				margin:5px;
+				text-align:center;line-height:50px;
+				cursor:pointer;
+			}
+		</style>
+	</head>
+	<body>
+		<div id="box">
+			<ul class="list" id="list">
+				
+				<!--<li>
+					<a href="#" style="background-color:#FFC0CB;">aaa</a>
+					<a href="#" style="background-color:green;">bbb</a>
+					<a href="#" style="background-color:blue;">ccc</a>
+					<a href="#" style="background-color:yellow;">ddd</a>
+				</li>-->
+				<!--<li>
+					<a href="#" style="background-color:#FFC0CB;">aaa</a>
+					<a href="#" style="background-color:green;">bbb</a>
+					<a href="#" style="background-color:blue;">ccc</a>
+					<a href="#" style="background-color:yellow;">ddd</a>
+				</li>
+				<li>
+					<a href="#" style="background-color:#FFC0CB;">aaa</a>
+					<a href="#" style="background-color:green;">bbb</a>
+					<a href="#" style="background-color:blue;">ccc</a>
+					<a href="#" style="background-color:yellow;">ddd</a>
+				</li>
+				<li>
+					<a href="#" style="background-color:#FFC0CB;">aaa</a>
+					<a href="#" style="background-color:green;">bbb</a>
+					<a href="#" style="background-color:blue;">ccc</a>
+					<a href="#" style="background-color:yellow;">ddd</a>
+				</li>
+				
+				<li>
+					<a href="#" style="background-color:#FFC0CB;">aaa</a>
+					<a href="#" style="background-color:green;">bbb</a>
+					<a href="#" style="background-color:blue;">ccc</a>
+					<a href="#" style="background-color:yellow;">ddd</a>
+				</li>
+				<li>
+					<a href="#" style="background-color:#FFC0CB;">aaa</a>
+					<a href="#" style="background-color:green;">bbb</a>
+					<a href="#" style="background-color:blue;">ccc</a>
+					<a href="#" style="background-color:yellow;">ddd</a>
+				</li>-->
+				<!--<li>
+					<a href=""></a>
+					<a href=""></a>
+					<a href=""></a>
+					<a href=""></a>
+				</li>-->
+			</ul>
+			<ul class="btn" id="btn">
+				<li id="li1">1</li>
+				<li>2</li>
+				<li>3</li>
+				<li>4</li>
+			</ul>
+		</div>
+		<script>
+			var list = document.getElementById("list")
+			
+			var btn = document.getElementById('btn')
+			var obtn = btn.getElementsByTagName('li');
+			var styles = document.getElementById("style")
+			var ocube = list.getElementsByTagName('li')
+			console.log(li1.offsetTop)
+			var num =8;//num为分割的数量
+			var str = '';
+			var sty = '';
+			for(var i=0;i<num;i++){
+				str+='<li><a href="#" style="background-color:#FFC0CB;">'+i+'上</a>'
+				str+='<a href="#" style="background-color:green;">'+i+'左</a>'
+				str+='<a href="#" style="background-color:blue;">'+i+'右</a>'
+				str+='<a href="#" style="background-color:yellow;">'+i+'下</a></li>';
+				
+			}
+			$('.list').html(str);
+			for(var i=0;i<obtn.length;i++){
+				obtn[i].index = i;
+				obtn[i].onclick = function(){
+					console.log($(this).index())
+					for(var j=0;j<ocube.length;j++){
+						console.log($(this).index())
+						//ocube[j].style.transition="all "+(500+(j*100))+"ms"
+						ocube[j].style.transition = "all "+(500+(j*100))+'ms'
+						ocube[j].style.transform = 'rotateX('+ this.index*90+'deg)';
+
+					}
+				}
+			}
+			
+		/*	var list=document.getElementById("list")
+		var ocube=list.getElementsByTagName("li")
+		var btn=document.getElementById("btn")
+		var obtn=btn.getElementsByTagName("li")
+		var styles=document.getElementById("style")
+			var num=80;
+			var str=''
+			var sty=''
+			for(var i=0;i<num;i++){
+				str+='<li><a href=""></a><a href=""></a><a href=""></a><a href=""></a></li>'	
+				sty+='.list li:nth-child('+(i+1)+') a{background-position: -'+(i*10)+'px 0;}'
+				
+			}
+			list.innerHTML=str
+			styles.innerHTML+=sty
+			
+			for(var i=0;i<obtn.length;i++){
+				obtn[i].index=i
+				obtn[i].onclick=function(){
+					for(var j=0;j<ocube.length;j++){
+						ocube[j].style.transition="all "+(500+(j*100))+"ms"
+						ocube[j].style.transform="rotateX("+this.index*90+"deg)"
+						
+					}
+				}
+			}*/
+		</script>
+	</body>
+</html>
