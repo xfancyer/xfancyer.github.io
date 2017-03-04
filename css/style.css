@@ -274,3 +274,7 @@ body {
 .container .caption h3 + p {
   margin-top: 5px;
 }
+
+.navbar .navbar-toggle .icon-bar{
+	background:#337ab7;
+}
