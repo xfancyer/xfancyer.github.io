@@ -113,12 +113,23 @@
 				})
 			}
 			var w = window.innerWidth;
-			$('.left').click(function(){
+			$('.right').click(function(){
 				num++;
 				if(num>=4){
-					num=0
+					num=0;
 				}
 				
+				change()
+				
+			})
+			$('.left').click(function(){
+				num--;
+				if(num<0){
+					num=4;
+				}
+				change()
+			})
+			function change(){
 				$('.cube p').each(function(){
 					var du = Math.random()*w;
 					$(this).css({
@@ -137,8 +148,7 @@
 					})
 					pintu()
 				},1500)
-				
-			})
+			}
 		</script>
 	</body>
 </html>
