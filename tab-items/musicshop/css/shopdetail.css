@@ -1,0 +1,205 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+html,
+body {
+  height: 100%;
+  background: #e8e9ee;
+}
+body {
+  color: #333;
+  height: 100%;
+  overflow-x: hidden;
+  font-size: 12px;
+}
+#box {
+  height: 100%;
+  width: 100%;
+}
+#box .main {
+  position: relative;
+  width: 16rem;
+  height: 100%;
+  margin: 0 auto;
+}
+#box .bar {
+  padding: 0 0.896rem;
+  overflow: hidden;
+}
+#box .header {
+  position: fixed;
+  top: 0;
+  width: 14.208rem;
+  height: 1.92rem;
+  z-index: 10;
+}
+#box .header div:nth-child(1) {
+  position: absolute;
+}
+#box .header div:nth-child(2) {
+  position: absolute;
+  left: 11rem;
+  top: 0.15rem;
+  font-size: 1.2rem;
+}
+#box .header div:nth-child(3) {
+  position: absolute;
+  left: 13rem;
+  top: 0.18rem;
+  font-size: 1.4rem;
+}
+#box .transparentback {
+  display: none;
+  position: fixed;
+  left: 0;
+  top: 0;
+  height: 100%;
+  width: 100%;
+  background: #000;
+  z-index: 100;
+  opacity: 0.1;
+}
+#box .packContent {
+  display: none;
+  position: absolute;
+  top: 1.5rem;
+  right: 0.213333rem;
+  z-index: 999;
+}
+#box .packContent .triangle-up {
+  width: 0;
+  height: 0;
+  border-left: 0.4rem solid transparent;
+  border-right: 0.4rem solid transparent;
+  border-bottom: 0.4rem solid #4c4d53;
+  z-index: 1000;
+  opacity: 0.8;
+  float: right;
+  margin-right: 0.8rem;
+}
+#box .packContent .backUlcontent {
+  margin-top: 0.34rem;
+  width: 4.208rem;
+  z-index: 999;
+  color: #fff;
+  text-align: center;
+  background: #4c4d53;
+  opacity: 0.9;
+  border-radius: 0.13333333rem;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+}
+#box .packContent .backUlcontent li {
+  padding: 0.397333rem 0;
+  text-align: center;
+  font-weight: bold;
+  border-bottom: 1px solid #5c5c5c;
+  width: 80%;
+  margin: 0 auto;
+}
+#box .packContent .backUlcontent li a {
+  display: inline-block;
+  width: 3.2rem;
+  color: #fff;
+}
+#box .container {
+  height: 100%;
+  width: 16rem;
+  padding: 0 0 2.09066667rem 0;
+  margin: 0 auto;
+  overflow-x: hidden;
+}
+#box .container img {
+  height: 16rem;
+  width: 16rem;
+}
+#box .container .infoBox {
+  height: 6.8rem;
+  background: #fff;
+  padding: 0.42666667rem;
+  margin-bottom: 0.21333333rem;
+  margin-top: -3px;
+}
+#box .container .infoBox .goodsName {
+  font-size: 0.64rem;
+  color: #666666;
+  word-break: break-all;
+  height: 1.024rem;
+  line-height: 1.024rem;
+  overflow: hidden;
+}
+#box .container .infoBox .goodsPrice {
+  margin-top: 0.21333333rem;
+  overflow: hidden;
+  border-bottom: 1px dashed  #d5d5d5;
+  padding-bottom: 0.981333rem;
+}
+#box .container .infoBox .goodsPrice .goodsPrice01 {
+  font-size: 1.024rem;
+  color: #ff4683;
+  float: left;
+  margin-right: 1.23733333rem;
+  font-weight: 900;
+}
+#box .container .infoBox .goodsPrice .goodsPrice02 {
+  font-size: 0.512rem;
+  color: #999;
+  float: left;
+  margin-top: 0.256rem;
+}
+#box .container .infoBox .sureicon {
+  width: 12.224rem;
+  height: 2.32rem;
+  margin: 0.341333rem auto 0.2rem;
+  background: url("http://s.yytcdn.com/v2/images/h5/goodssureicon_03.png") no-repeat;
+  background-size: 12.224rem 1.92rem;
+}
+#box .container .dashead {
+  margin: 0 4%;
+  overflow: hidden;
+  font-size: 0.512rem;
+  color: #4c4d53;
+  font-weight: bold;
+  border-bottom: 1px dashed #d5d5d5;
+  margin-bottom: 0.597333rem;
+}
+#box .container .dashead .dasheadDiv1 {
+  width: 50%;
+  float: left;
+  height: 1.749333rem;
+  text-align: center;
+  line-height: 1.749333rem;
+}
+#box .container .dashead .dasheadDiv1 .des-goodsdes1 {
+  color: #ff4683;
+  border-top: 3px solid #ff4683;
+  display: inline-block;
+  height: 1.728rem;
+}
+#box .container .dashead .desfenge {
+  float: left;
+  width: 0.085333rem;
+  height: 0.469333rem;
+  background: url("http://s.yytcdn.com/v2/images/h5/feddiocn.png") no-repeat 0 -2.261333rem;
+  background-size: 0.896rem 2.730667rem;
+  margin-top: 0.682667rem;
+}
+#box .container .dashead .dasheadDiv2 {
+  width: 45%;
+  float: left;
+  height: 1.749333rem;
+  text-align: center;
+  line-height: 1.749333rem;
+}
+#box .container .dashead .dasheadDiv2 .des-goodsdes2 {
+  display: inline-block;
+  height: 1.728rem;
+}
+#box .footer {
+  z-index: 100;
+  background: #fff;
+  position: fixed;
+  bottom: 0;
+  width: 16rem;
+  height: 2.09066667rem;
+}

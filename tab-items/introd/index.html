@@ -109,7 +109,7 @@
 			       						<p class="ani"  swiper-animate-effect="bounceInRight" swiper-animate-duration="2s" swiper-animate-delay="1.5s"><em class="iconfont icon-jinlingyingcaiwangtubiao91 em_right" ></em>在校大学生一枚</p>
 			       						<p class="ani"  swiper-animate-effect="bounceInRight" swiper-animate-duration="2s" swiper-animate-delay="1.8s">
 											<span>
-												-2015.07<br/>
+												
 												丰富有趣的大学生活~
 												<br/>
 												~c、c++、c#、数据结构、网络、操作系统、信息管理、运维...~~
@@ -127,10 +127,8 @@
 			       						<p class="ani"  swiper-animate-effect="bounceInLeft" swiper-animate-duration="2s" swiper-animate-delay="2.5s"><em class="iconfont icon-jinlingyingcaiwangtubiao91 em_right"></em>前端工程师</p>
 			       						<p class="ani"  swiper-animate-effect="bounceInLeft" swiper-animate-duration="2s" swiper-animate-delay="2.8s"> 
 										<span>
-											-2017/3<br/> 
-											学习~~~~<br/>
-											工作~~~~<br/>
-											...
+											2017/3<br/> 
+											一个新的开始~
 										</span>
 			       						</p>
 			       					</div>
@@ -143,7 +141,7 @@
 			       				<div class="right">
 			       					<span class="dian ani"  swiper-animate-effect="bounceIn" swiper-animate-duration="2s" swiper-animate-delay="3s"></span>
 			       					<div class="fl">
-			       						<p class="ani"  swiper-animate-effect="bounceInRight" swiper-animate-duration="2s" swiper-animate-delay="3.5s"><em class="iconfont icon-jinlingyingcaiwangtubiao91 em_right"></em> 路在何方...</p>
+			       						<p class="ani"  swiper-animate-effect="bounceInRight" swiper-animate-duration="2s" swiper-animate-delay="3.5s"><em class="iconfont icon-jinlingyingcaiwangtubiao91 em_right"></em> 未来路在何方...</p>
 			       						<p class="ani"  swiper-animate-effect="bounceInRight" swiper-animate-duration="2s" swiper-animate-delay="3.8s"><span>What is the future ？</span></p>
 			       					</div>
 			       				</div>
@@ -247,27 +245,27 @@
 		        		<ul>
 		        			<li class="ani" swiper-animate-effect="fadeInLeft li1"  swiper-animate-duration="1s" swiper-animate-delay="2s">
 		        				<p><img src="img/xiaotu_03.jpg"></p>
-		        				<p>添加说明</p>
+		        				<p>bootstrap</p>
 		        			</li>
 		        			<li class="ani" swiper-animate-effect="fadeInLeft li1"  swiper-animate-duration="1s" swiper-animate-delay="2.3s">
 		        				<p><img src="img/xiaotu_05.jpg"></p>
-		        				<p>添加说明</p>
+		        				<p>react</p>
 		        			</li>
 		        			<li class="ani" swiper-animate-effect="fadeInLeft li1"  swiper-animate-duration="1s" swiper-animate-delay="2.6s">
 		        				<p><img src="img/xiaotu_08.jpg"></p>
-		        				<p>添加说明</p>
+		        				<p>angular</p>
 		        			</li>
 		        			<li class="ani" swiper-animate-effect="fadeInRight li1"  swiper-animate-duration="1s" swiper-animate-delay="2.9s">
 		        				<p><img src="img/xiaotu_14.jpg"></p>
-		        				<p>添加说明</p>
+		        				<p>vue</p>
 		        			</li>
 		        			<li class="ani" swiper-animate-effect="fadeInRight li1"  swiper-animate-duration="1s" swiper-animate-delay="3.1s">
 		        				<p><img src="img/xiaotu_17.jpg"></p>
-		        				<p>添加说明</p>
+		        				<p>移动端</p>
 		        			</li>
 		        			<li class="ani" swiper-animate-effect="fadeInRight li1"  swiper-animate-duration="1s" swiper-animate-delay="3.4s">
 		        				<p><img src="img/xiaotu_20.jpg"></p>
-		        				<p>添加说明</p>
+		        				<p>PC端</p>
 		        			</li>
 		        		</ul>
 		        	</div>
@@ -291,6 +289,13 @@
 		        
 		    </div> 
 		    <div class="swiper-pagination"></div>
+			
+			<div class="big-music">
+				<img id="btn" src="img/music_off_8d94020.png" alt="" />
+				<audio id="music">
+					<source src="img/黄家伟 - 天空之城.mp3"></source>
+				</audio>
+			</div>
 		</div>
 		<script src="js/swiper.min.js"></script>
 		<script src="js/swiper.animate.min.js"></script>
@@ -313,6 +318,25 @@
 					} 
 				    
 		}) 
+
+
+		//音乐旋转播放
+		var music=document.getElementById('music');
+		var btn=document.getElementById('btn');
+		
+		btn.onclick=function(){
+			if(music.paused){
+				music.play();
+				this.className='xuan';
+				music.loop='loop';
+				this.parentNode.style.background='url(img/music.gif)';
+			}else{
+				music.pause();
+				this.className='';
+				music.loop='';
+				this.parentNode.style.background='';
+			}
+		}
 		</script>
 		
 	</body>

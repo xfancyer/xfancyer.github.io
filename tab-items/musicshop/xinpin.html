@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />		
+	
+		<title></title>
+	</head>
+	<link rel="stylesheet" type="text/css" href="css/swiper.min.css"/>
+	<link rel="stylesheet" type="text/css" href="css/xinpin.css"/>
+	<link rel="stylesheet" type="text/css" href="//at.alicdn.com/t/font_ylhn6iro2fzb0529.css"/>
+	
+	<body>
+		<header>
+			<p>
+				<a href="index.html"><i class="iconfont icon-icon09"></i></a>
+				<a>新品首发</a>
+				<a class="sangedian"><i class="iconfont icon-sangedian"></i></a>
+			</p>
+		<div class="top-nav" style="display:none;"> 
+			<div class="sanjiao"></div>
+			<div class="backhomeContent">
+				<a href="">主页</a>
+				<a href="">分类</a>
+				<a href="">发现</a>
+				<a href="">购物车</a>
+				<a class="last" href="">我的</a>
+			</div>
+		</div>
+		</header>
+		
+		<div id="main">
+		<div class="newgoodscont">
+			<!--<div class="newgoodslist">
+				<a><div class="newgoodscell">
+					<img src="">
+					<div class="newgoodscell_r">
+						<p class="newgoodsnprice">
+							<span class="now_price">￥</span>
+							<span class="del"></span>
+						</p>
+					</div>
+					
+				</div>
+				</a>
+				<div class="newgoodsmark">
+						
+				</div>
+			</div>-->
+		</div>
+	</div>
+		<article>
+			
+		</article>
+		
+	<script src="js/jquery-1.10.1.min.js" type="text/javascript" charset="utf-8"></script>
+	<!--<script src="js/zepto.js" type="text/javascript" charset="utf-8"></script>-->
+	<script src="js/iscroll.js" type="text/javascript" charset="utf-8"></script>
+	<script src="js/swiper.min.js" type="text/javascript" charset="utf-8"></script>
+	
+	
+
+	<script>
+	window.addEventListener("resize",function(){
+	                document.getElementsByTagName("html")[0].style.fontSize=window.innerWidth/10+"px"
+	})
+	document.getElementsByTagName("html")[0].style.fontSize=window.innerWidth/10+"px"
+	
+	
+	$.ajax({
+		type:"get",
+		url:"http://shop.m2.yinyuetai.com/api/goods/findNewGoods.json?num=4",
+		
+		success:function(data){
+			
+			var str='';
+			for(var i in data.data.goodsMap){
+				//console.log(i)
+				var len = data.data.goodsMap[i].length;
+				var intro ;
+				switch(i){
+					case 'digit':intro = '影漫';break;
+					case 'album':intro ='专辑';break;
+					case 'surrounding':intro ='周边';break;
+				}
+				
+				for(var j=0;j<len;j++){//len
+					console.log(data.data.goodsMap[i][j]);
+					str += '<div class="newgoodslist">';//完整列表项目
+					str+='<a><div class="newgoodscell">'//主内容信息框
+					str+='<img src="'+data.data.goodsMap[i][j].headImg+'" data-id="'+data.data.goodsMap[i][j].id+'">';//左侧图片
+					str+='<div class="newgoodscell_r"><p class="title">'+data.data.goodsMap[i][j].title+'</p>';//右侧信息
+					str+='<p class="newgoodsnprice"><b class="now_price">￥'+data.data.goodsMap[i][j].price+'</b><span class="del">'+data.data.goodsMap[i][j].srcPrice+'</span></p>';//价格信息
+					str+='</div></div></a>'
+					str+='<div class="newgoodsmark">'+intro+'</div></div>'
+					$('.newgoodscont').html(str)	
+				
+				}
+			}
+			
+		}
+	});
+	
+	$('.sangedian').on('click',function(ev){
+		console.log(1)
+		ev.stopPropagation()
+		$('header .top-nav').show();
+	})
+	
+	$(document).on("click",function(ev){
+		ev.stopPropagation()
+		$("header .top-nav").css("display","none")
+	})
+	
+	$('.newgoodscont').on('click','.newgoodslist',function(){
+		console.log(1)
+		console.log($(this).find('img').attr('data-id'))
+		var data_id = $(this).find('img').attr('data-id');
+		location.href = 'xinagqing.html'+'?goodsId='+data_id;
+	})
+	</script>
+	</body>
+</html>

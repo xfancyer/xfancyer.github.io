@@ -1,0 +1,27 @@
+body {
+  padding-left: 14px;
+}
+.div1 {
+  position: relative;
+  width: 100px;
+  height: 100px;
+  top: 200px;
+  left: 100px;
+  border: 3px solid yellow;
+}
+.div1:hover {
+  animation: move 1s;
+}
+.div2 {
+  width: 70px;
+  height: 70px;
+  background: pink;
+}
+@keyframes move {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(30deg);
+  }
+}

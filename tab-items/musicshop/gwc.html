@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />		
+	
+	<link rel="stylesheet" type="text/css" href="css/swiper.min.css"/>
+	<link rel="stylesheet" type="text/css" href="css/gwc.css"/>
+	<link rel="stylesheet" type="text/css" href="//at.alicdn.com/t/font_ylhn6iro2fzb0529.css"/>
+		
+	<body style="background-color:#E8E9EE">
+		<header>
+			<p>
+				<a class="bianji">编辑</i></a>
+				<a>新品首发</a>
+				<a class="sangedian"><i class="iconfont icon-sangedian"></i></a>
+			</p>
+		<div class="top-nav" style="display:none;"> 
+			<div class="sanjiao"></div>
+			<div class="backhomeContent">
+				<a href="index.html">主页</a>
+				<a href="xiangqing.html">分类</a>
+				<a href="discovery.html">发现</a>
+				<a class="last" href="myself.html">我的</a>
+			</div>
+		</div>
+		</header>
+		<article>
+			<!--[{"gw_id":"4525","gw_tit":"【全款现货-款式可选】TAKARA TOMY宠物小精灵 扭蛋-品质保障-音悦台旗下","gw_img":"http://img1.c.yinyuetai.com/others/admin/161227/0/-M-3c74ddea737bbd3c0c2adbe7814dac99_356x356.jpg","gw_pri":22,"gw_num":1,"gw_xinghao":"杰尼龟"}]-->
+			
+			<!--<div class="shop_list">
+				<spam class="xuanze">✔</span>
+				<p class="shop_img" src="http://img1.c.yinyuetai.com/others/admin/161227/0/-M-3c74ddea737bbd3c0c2adbe7814dac99_356x356.jpg"></p>
+				<a class="gw_ra"><div class="gw_r">
+					<p class="tit">【全款现货-款式可选】TAKARA TOMY宠物小精灵 扭蛋-品质保障-音悦台旗下</p>
+					<p><b>￥45</b><i>x1</i></p>
+				</div></a>
+			</div>-->
+		</article>
+		</header>
+		<footer>
+			<div class="gw_l"><p><span  class="checked check-all">✔</span>全选</p></div>
+			<div class="all_count">
+				<span class="count1">合计： <b>￥</b><b class="allmoney"></b></span><br>
+				<span class="count2">不含运费</span>
+			</div>
+			<div class="jiesuan"><p><span>结算</span>（<span class="shop_num">4</span>）</p></div>
+		</footer>
+	<script src="js/jquery-1.10.1.min.js" type="text/javascript" charset="utf-8"></script>
+	<!--<script src="js/zepto.js" type="text/javascript" charset="utf-8"></script>-->
+	<script src="js/iscroll.js" type="text/javascript" charset="utf-8"></script>
+	<script src="js/swiper.min.js" type="text/javascript" charset="utf-8"></script>
+	<script type="text/javascript">
+		window.addEventListener("resize",function(){
+		                document.getElementsByTagName("html")[0].style.fontSize=window.innerWidth/10+"px"
+		})
+		document.getElementsByTagName("html")[0].style.fontSize=window.innerWidth/10+"px"
+		//其他按钮及跳转按钮
+		$('.sangedian').on('click',function(ev){
+			
+			ev.stopPropagation()
+			$('header .top-nav').show();
+		})
+		
+		$(document).on("click",function(ev){
+			ev.stopPropagation()
+			$("header .top-nav").css("display","none")
+		})
+		
+		console.log(localStorage.getItem('carts'))
+		var gw_xinghao='';
+		var gw_shop = JSON.parse(localStorage.getItem('carts'));
+		console.log(gw_xinghao)
+		var gw_num;
+		
+		for(var i in gw_shop){
+			var str = '';
+				//console.log(gw_shop[i])
+				var str_xinghao = '';
+				
+				if(gw_shop[i].gw_name){
+					
+					gw_xinghao = gw_shop[i].gw_name
+				
+					gw_xinghao = gw_xinghao.split('&')
+					
+					
+					
+					for(var j = 0;j<gw_xinghao.length-1;j++){
+				//	console.log(gw_xinghao[j])
+						gw_name_arr=gw_xinghao[j].split('--');
+						str_xinghao+=gw_name_arr[0]+' '+gw_name_arr[1];
+					}
+				//	console.log(str_xinghao)
+				}
+				gw_num = gw_shop[i].gw_num;//购物数量
+				console.log(str_xinghao)
+				str += '<div class="shop_list"><a class="xuanze"><span  class="checked sel">✔</span></a>';
+				str+='<p class="shop_img" style="background:url('+gw_shop[i].gw_img+') no-repeat;background-size:100%" dtat-id="'+gw_shop[i].gw_id+'"></p>'
+				str+='<a class="gw_ra"><div class="gw_r"><p class="gw_title">'+gw_shop[i].gw_tit+'</p><div class="gw_number"><i class="gw_bt1">-</i><span class="buy_num">'+gw_num+'</span><i class="gw_bt2">+</i></div><em style="visible:hidden;height:0;" ></em><p class="gw_rb"><span class="xinghao">'+str_xinghao+'</span><b class="price">￥'+gw_shop[i].gw_pri+'</b><i class="num">x'+gw_num+'</i></p></div></a></div>'
+			$('article').append(str);
+			
+			
+		}
+		console.log(gw_shop)
+		$('.shop_list .xuanze').click(function(){
+			$(this).find('span').toggleClass('checked')
+			xuanze();
+		})
+		
+		$('.bianji').click(function(){
+			getallmon()
+			if($(this).html() == '编辑'){
+				console.log(1)
+				$(this).html('完成')
+				$('.gw_title').hide();
+				$('.gw_number').show();
+				
+				
+			}else{
+				$(this).html('编辑');
+				$('.gw_title').show();
+				$('.gw_number').hide();
+			}
+			
+			
+		})
+		
+		//全选按钮
+		var selall = true;//未全选
+		function xuanze(){
+			
+			selall = false;
+			if($('span[class~=sel]').hasClass('checked')){
+				selall = true;
+				
+			}
+			console.log(selall)
+			if(selall){
+				$('.check-all').attr('class','checked check-all')
+			}else{
+				$('.check-all').removeClass('checked')
+			}
+			getallmon();
+		}
+		
+		
+		$('.check-all').click(function(){
+			if($(this).is('.checked')){
+				//如果是选择
+				$('span[class~=sel]').css('class','sel').removeClass('checked');
+				$(this).removeClass('checked');
+			}else{
+				$('span[class~=sel]').css('class','sel').attr('class','checked sel');
+				//$('article').is('.sel').css('class','checked sel');
+				$(this).addClass('checked')
+			}
+			getallmon()
+		})
+		
+		
+		$('.gw_r .gw_number').on('click','i',function(){
+			buy_num = $(this).parent().find('.buy_num').html();
+			console.log(buy_num)
+			if($(this).is('.gw_bt1')){
+				if(buy_num==1){
+					alert('购买数量不能小于1~')
+					return;
+				}else{
+					buy_num--;
+					$(this).parent().find('.buy_num').html(buy_num)
+				}
+			}else{
+				buy_num++;
+				$(this).parent().find('.buy_num').html(buy_num)
+			}
+			getallmon();
+		})
+		
+		//总额
+		getallmon()
+		function getallmon(){
+			var sum_money=0;
+			var sum_num=0;
+			var price=0;
+			$('.gw_r').each(function(){
+				if(!$(this).parents('.shop_list').find('.sel').hasClass('checked')){
+					sum_num+=parseInt($(this).find('.buy_num').html());
+					price = parseFloat($(this).find('.price').html().slice(1)).toFixed(2);
+					console.log(price)
+					console.log(price*sum_num)
+					sum_money+=price*sum_num;
+					console.log(sum_money)
+				}
+				
+			})
+			console.log('数量：'+sum_num+' 总额：'+sum_money)
+			$('footer .allmoney').html(parseFloat(sum_money).toFixed(2));
+			$('footer .shop_num').html(sum_num);
+			if(sum_num == 0){
+				$('footer .jiesuan').css('backgroundColor','#b4b4b4')
+			}else{
+				$('footer .jiesuan').css('backgroundColor','')
+			}
+		}
+	</script>
+	</body>
+</html>

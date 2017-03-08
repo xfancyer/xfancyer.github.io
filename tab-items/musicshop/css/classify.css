@@ -1,0 +1,140 @@
+html,body{
+	width:100%;
+	height:100%;
+	overflow-x:hidden;
+	overflow-y: scroll;
+	font-family: "微软雅黑";
+}
+header{
+	width:100%;
+	height:1.2rem;
+	background-color:#4c4d53;
+	display: flex;
+	flex-direction: row;
+}
+header a{
+	display:block;
+	width:1.2rem;
+	height:1.2rem;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+header a span{
+	display:inline-block;
+	width:0.24rem;
+	height:0.32rem;
+	background:url(../images/back.png) no-repeat;
+	background-size: cover;
+}
+.headtitle{
+	flex:1;
+	text-align: center;
+	font-size: 0;
+}
+.headtitle span{
+	display: inline-block;
+	color:#fff;
+	text-align: center;
+	padding:0 0.25rem;
+	height:1.2rem;
+	line-height: 1.2rem;
+	font-size: 0.32rem;
+}
+.bgP{
+	background-color: #ff4683;
+}
+#more{
+	width:1.2rem;
+	height:1.2rem;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+#more span{
+	display:inline-block;
+	width:0.48rem;
+	height:0.13rem;
+	background:url(../images/more.png) no-repeat 0 -0.106rem;
+	background-size:0.43rem 0.21rem;
+}
+
+
+
+/*   主题页样式      */
+#box{
+	position: relative;
+}
+.picShow{
+	width:100%;
+	height:5.13rem;
+}
+.pic{
+	width:100%;
+	height:100%;
+}
+.picTit{
+	position:absolute;
+	width:100%;
+	top:5.1rem;
+	left:0.4rem;
+}
+.p2{
+	width:100%;
+	height:0.5rem;
+	line-height: 0.5rem;
+	font-size: 0;
+}
+.p2-title{
+    display: inline-block;
+    width: 9rem;
+    color: #fff;
+    font-size: 0.3rem;
+    overflow: auto;
+}
+.prolist{
+	margin-left: 0.4rem;
+	height: 1.06666667rem;
+    line-height: 1.01333333rem;
+    border-bottom: 1px solid #e5e5e5;
+    overflow-x: auto;
+    overflow-y: hidden;
+    white-space: nowrap;
+}
+.themeClassify {
+	font-size:0;
+}
+.themeClassify-i{
+	display: inline-block;
+    margin-right: .66666667rem;
+    font-size: .32rem;
+    color: #201f1f;
+}
+.borP{
+    color: #ff4683;
+    border-bottom: .05333333rem solid #ff4683;
+}
+.list{
+	overflow: hidden;
+	margin: 0.4rem;
+}
+.listdetail{
+    width: 4.14666667rem;
+    height: 5.78666667rem;
+    float: left;
+    margin-right:0.453rem
+}
+.listdetail img{
+    width: 100%;
+    height:4.17rem;
+    border-radius: .21333333rem;
+    border-style: none;
+}
+.listdetail p{
+    height: .9rem;
+    color: #201f1f;
+    font-size: .32rem;
+    overflow: hidden;
+    text-overflow: ellipsis;	
+}
+

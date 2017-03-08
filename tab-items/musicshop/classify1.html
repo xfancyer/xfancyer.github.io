@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<title></title>
+		<link rel="stylesheet" type="text/css" href="css/style.css"/>
+		<link rel="stylesheet" href="//at.alicdn.com/t/font_7oxow1ofd4lblnmi.css" />
+		<!--<script src="js/jquery-1.11.1.min.js"> </script>-->
+		<!--<script src="js/zepto.js"></script>-->
+	</head>
+	<body>
+		
+			
+		<div class="theme">
+			<div id="box">
+				<!--分页头部-->
+				<header class="header-top">  
+					<div class="header-left"> < </div>
+					<div class="header-middle">分类</div>
+					<div class="header-right"><span class="iconfont icon-sangedian"></span></div>				
+				</header>
+			
+				<div class="top-nav" style="display:none;"> 
+					
+					<div class="sanjiao"></div>
+					
+					<div class="backhomeContent">
+						<a href="">主页</a>
+						<a href="">分类</a>
+						<a href="">发现</a>
+						<a href="">购物车</a>
+						<a href="">我的</a>
+					</div>
+				</div>
+				<!--table的选项卡部分-->
+				<nav class="nav">  
+				
+					<span class="navColor">专辑</span>
+					<span>周边</span>
+					<span>明星潮款</span>
+					<span>个性美妆</span>
+					<span>影漫周边</span>
+					<span>众筹</span>
+					
+				
+			</nav>
+				<!--首页才有的广告部分-->
+				<div class="adv"> 
+				
+				<span></span>
+				<span>独家授权 计入韩国hanteo榜单</span>
+			</div>
+				<!--发布时间和筛选-->
+				<div class="issutime">  
+				
+				<span class="timeselect">
+					<span>发布时间</span>
+					<span class="sanjiao iconfont icon-daosanjiao"></span>
+				</span>
+				<span class="issu">筛选</span>
+			</div>
+			
+			
+				<!--商品列表-->
+				<div style="clear:both" class="datalist"> 
+				
+				</div>
+			
+			
+				<div class="drawerBack" style="display:none">
+					<div>
+						<div class="drawer">
+							<header class="drawerHead">
+								<span class="hotbackbtn"><</span>
+								<span>筛选</span>
+							</header>
+							<div class="drawerContent">
+								<div class="publicAttr">
+									<span>艺人</span>
+									<span class="rightspan">></span>
+								</div>
+								<div class="drawtype">
+									<div>分类</div>
+									<span>原版</span>
+									<span>内地引进版</span>
+									<span>签名版</span>
+									<span>演唱会DVD...</span>
+									<span>限量版</span>
+								</div>
+								<div class="drawerBtn">
+									<span class="selectBtn">重置</span>
+									<span class="selectBtn">确定</span>
+								</div>
+							</div>
+						</div>
+						
+					</div>
+				</div>
+			
+			
+			</div>
+			
+			<div class="pubDate" style="display:none;"> 
+					<div class="pophead">
+						<span>排序</span>
+						<i> </i>
+					</div>
+					<div class="div1 new-good">
+						<i></i>
+						<span>最新发布</span>
+					</div>
+					<div class="div1 low-to-hight">
+						<i></i>
+						<span>价格从低到高</span>
+					</div>
+					<div class="div1 hight-to-low">
+						<i></i>
+						<span>价格从高到低</span>
+					</div>
+					<div class="div1 sell-nums">
+						<i></i>
+						<span>销量</span>
+					</div>
+				</div>
+		
+		</div>
+		
+		
+		<script src="js/jquery-1.11.1.min.js"></script>
+	</body>
+</html>
+	
+	 <script>
+	 
+	 
+	 
+	 	window.addEventListener("resize",function(){
+			document.getElementsByTagName("html")[0].style.fontSize=window.innerWidth/10+"px";
+		})
+	 	document.getElementsByTagName("html")[0].style.fontSize=window.innerWidth/10+"px";
+	 	
+	 	
+	 	$.ajax({
+	 		type:"get",
+	 		url:"http://shop.m2.yinyuetai.com/api/search/getListGoods.json?bannerType=ALBUM&priceSort=&sellNumSort=&updateTime=&ppath=&pageNum=0&pageSize=10",
+	 		data:"data",
+	 		async:true,
+	 		success:function(data){
+	 			console.log(data)
+	 			var str="";
+	 			
+	 			for(var i=0;i<data.data.goodsPage.list.length;i++){
+	 				str+='<div class="row"><img src="'+data.data.goodsPage.list[i].headImg+'" alt="" data_id='+data.data.goodsPage.list[i].id+'><p>'+data.data.goodsPage.list[i].title+'</p></div>'
+	 			}
+	 			$(".datalist").html(str)
+	 			
+	 		}
+	 	});
+	 	
+	 
+	 		$(".header-right").click(function(ev){
+	 			ev.stopPropagation()
+		 		$(".top-nav").css("display","block")
+		 	})
+	 	 	$(document).on("click",function(ev){
+	 			ev.stopPropagation()
+				$(".top-nav").css("display","none")
+				$(".pubDate").css("display","none")
+				
+			})
+	 	
+	 	
+	 		$(".issu").on("click",function(){
+	 			$(".drawerBack").css("display","block")
+	 		})
+	 		$(".hotbackbtn").on("click",function(){
+	 			$(".drawerBack").css("display","none")
+	 		})
+	 		
+	 		$(".timeselect").on("click",function(ev){
+	 			ev.stopPropagation()
+	 			$(".pubDate").css("display","block")
+	 		})
+	 		 	
+	 	$(".nav span").click(function(){
+	 		switch ( $(this).index() ){
+	 			case 0:tableList("http://shop.m2.yinyuetai.com/api/search/getListGoods.json?bannerType=ALBUM&priceSort=&sellNumSort=&updateTime=&ppath=&pageNum=0&pageSize=10");
+	 					$(this).addClass("navColor").siblings().removeClass("navColor")
+	 				break;
+	 			case 1:tableList("http://shop.m2.yinyuetai.com/api/search/getListGoods.json?bannerType=SURROUNDING&priceSort=&sellNumSort=&updateTime=&ppath=&pageNum=0&pageSize=10");
+	 					$(this).addClass("navColor").siblings().removeClass("navColor")
+	 				break;
+	 			case 2:tableList("http://shop.m2.yinyuetai.com/api/search/getListGoods.json?bannerType=CHAORENGUAN&priceSort=&sellNumSort=&updateTime=&ppath=&pageNum=0&pageSize=10");
+	 					$(this).addClass("navColor").siblings().removeClass("navColor")
+	 				break;
+	 			case 3:tableList("http://shop.m2.yinyuetai.com/api/search/getListGoods.json?bannerType=CAIZHUANG&priceSort=&sellNumSort=&updateTime=&ppath=&pageNum=0&pageSize=10");
+	 					$(this).addClass("navColor").siblings().removeClass("navColor")
+	 				break;
+	 			case 4:tableList("http://shop.m2.yinyuetai.com/api/search/getListGoods.json?bannerType=DIGIT&priceSort=&sellNumSort=&updateTime=&ppath=&pageNum=0&pageSize=10");
+	 					$(this).addClass("navColor").siblings().removeClass("navColor")
+	 				break;
+	 			case 5: tableList("http://shop.m2.yinyuetai.com/api/search/getListGoods.json?bannerType=CROWD_FUNDING&priceSort=&sellNumSort=&updateTime=&ppath=&pageNum=0&pageSize=10");
+	 					$(this).addClass("navColor").siblings().removeClass("navColor")
+	 				break;
+	 		}
+	 			/*ajax函数*/	 		
+	 	}) 	
+	 	function tableList(jsonurl){
+	 		$.ajax({
+	 			type:"get",
+	 			url:jsonurl,
+	 			data:"data",
+	 			async:true,
+	 			success:function(data){
+	 				var str="";
+	 				
+	 				for(var i=0;i<data.data.goodsPage.list.length;i++){
+	 					str+='<div class="row"> <img src="'+data.data.goodsPage.list[i].headImg+'" alt=""  data_id='+data.data.goodsPage.list[i].id+'> <p>'+data.data.goodsPage.list[i].title+'</p></div>'
+	 				}
+	 				
+	 				$(".datalist").html(str)
+	 			
+	 			}
+	 		});
+	 	}
+	 	
+	 	$(".datalist").on("click","img",function(){
+	 		window.location.href='xinagqing.html?goodsId='+$(this).attr("data_id");
+	 		console.log($(this).attr("data_id"))
+	 	})
+	 	$(".header-left").on("click",function(){
+	 		window.location.href="index.html"
+	 	})
+	 	
+	 	
+	 	$('.low-to-hight').on("click",function(ev){
+	 		ev.stopPropagation();
+	 		$.ajax({
+	 			type:"get",
+	 			url:"http://shop.m2.yinyuetai.com/api/search/getListGoods.json?bannerType=ALBUM&priceSort=&sellNumSort=&updateTime=&ppath=&pageNum=0&pageSize=10",
+	 			async:true,
+	 			success:function(data){
+	 				
+	 				var str="";
+	 				var arr=[]
+	 				//console.log(data)
+	 				for(var i=0;i<data.data.goodsPage.list.length;i++){
+	 					//console.log(data.data.goodsPage.list[i].price)
+	 					//arr.push(data.data.goodsPage.list[i].price)
+	 					//console.log(arr)
+	 					
+	 				}
+	 				
+	 			}
+	 		});
+	 	})
+	 	
+	 </script>
+	 
+
+

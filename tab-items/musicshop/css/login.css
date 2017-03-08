@@ -1,0 +1,225 @@
+html,body{
+	width:100%;
+	height:100%;
+	overflow:hidden;
+	font-family: "微软雅黑";
+	background-color: #f5f5f5;
+	font-size:0;
+}
+header{
+	width:100%;
+	height:1.1rem;
+	background-color:black;
+	display: flex;
+	flex-direction: row;
+}
+header a{
+	display:block;
+	width:1.1rem;
+	height:1.1rem;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+header a span{
+    display: inline-block;
+    color: white;
+    width: 1.1rem;
+    height: 1.1rem;
+    text-align: center;
+    line-height: 1.1rem;
+    font-size: 0.4rem;
+}
+.headtitle{
+	flex:1;
+	text-align: center;
+	font-size: 0;
+}
+.headtitle span{
+	display: inline-block;
+	color:#fff;
+	text-align: center;
+	padding:0 0.25rem;
+	height:1.1rem;
+	line-height: 1.1rem;
+	font-size: 0.45rem;
+}
+#more{
+	width:1.1rem;
+	height:1.1rem;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+#more span{
+	display: inline-block;
+    width: 0.5rem;
+    height: 0.7rem;
+    background: url(../images/ico_m_login.png) no-repeat scroll 0 -1.3rem;
+    background-size: 0.5rem 8rem;
+}
+
+
+
+.title-tip{
+    text-align: left;
+    width: 89%;
+    font-size: 0.35rem;
+    color: #7c7b79;
+    padding:0.4rem;
+}
+.username{
+	width: 92%;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: left;
+    margin: 0 auto 0.5rem;
+    position: relative;
+}
+.username input{
+    background-color: #FFFFFF;
+    width: 77%;
+    height: 0.8rem;
+    border: 0.06rem solid #d3d3d3;
+    color: #bcbab8;
+    border-radius: 0.5rem;
+    padding: 0 1rem;
+    outline: none;
+    display: block;
+    background: url(../images/ico_m_login.png) no-repeat 0.08rem -3.444rem;
+    background-size:0.6875rem 10.3125rem;
+}
+.username a{
+	height: 0.6875rem;
+    position: absolute;
+    right: 0.1rem;
+    top: 0.1rem;
+    width: 0.78125rem;
+    background: url(../images/ico_m_login.png) no-repeat 0.08rem -7rem;
+    background-size: 0.6875rem 10.3125rem;
+}
+.userPassword{
+	width: 92%;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: left;
+    margin: 0 auto 0.5rem;
+    position: relative;
+}
+.userPassword input{
+    background-color: #FFFFFF;
+    width: 77%;
+    height: 0.8rem;
+    border: 0.06rem solid #d3d3d3;
+    color: #bcbab8;
+    border-radius: 0.5rem;
+    padding: 0 1rem;
+    outline: none;
+    display: block;
+    background: url(../images/ico_m_login.png) no-repeat 0.08rem -5.19rem;
+    background-size:0.6875rem 10.3125rem;
+}
+.userPassword a{
+	height: 0.6875rem;
+    position: absolute;
+    right: 0.1rem;
+    top: 0.1rem;
+    width: 0.78125rem;
+    background: url(../images/ico_m_login.png) no-repeat 0.08rem -7rem;
+    background-size: 0.6875rem 10.3125rem;
+}
+.loginBtn{
+	margin-left:0.46875rem;
+	margin-bottom:0.46875rem;;
+}
+#logBtn{
+    width: 95%;
+    border-radius: 0.625rem;
+    color: #fff;
+    font-size: 0.5rem;
+    height: 1.1rem;
+    line-height: 1.1rem;
+    padding: 0 0.1875rem;
+    text-align: center;
+    outline: none;
+    background-color:#33e1a7;
+    border:none;
+    font-family: "微软雅黑";
+}
+.registerBtn{
+	margin-left:0.46875rem;;
+	margin-bottom:0.46875rem;;
+}
+#resBtn{
+	display:block;
+    width: 90%;
+    border-radius: 0.625rem;
+    font-size: 0.5rem;
+    height: 1rem;
+    line-height: 1rem;
+    padding: 0 0.1875rem;
+    text-align: center;
+    outline: none;
+    border:0.0625rem solid #dcdcdc;
+    background-color:#f5f5f5;
+    color:#7c7b79
+}
+.findPwd{
+    width: 90%;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: left;
+}
+.findPwd a{
+	float: right;
+    color: #7c7b79;
+    font-size: 0.5rem;
+    text-decoration: underline;
+}
+.method-title{
+    margin-left: auto;
+    margin-right: auto;
+    width: 80%;
+    position: relative;
+    margin-top: 100px;
+    font-size: 0.4375rem;
+    color: #a7a7a7;
+    line-height: 0.625rem;
+    height: 0.625rem;
+    text-align: center;
+    border-bottom: 1px solid #d3d3d3;	
+}
+.method-title span{
+    position: relative;
+    top: 0.3125rem;
+    background-color: #f5f5f5;
+    padding: 0 3px;
+}
+.method{
+	margin-left: auto;
+    margin-right: auto;
+    width: 80%;
+    height:85px;
+    display: flex;
+}
+.method div{
+	padding-top: 1rem;
+    width: 50%;
+    text-align: center;
+    flex: 1;
+    font-size: 0;
+}
+.method-wb{
+	display: inline-block;
+    width: 1.5rem;
+    height: 1.5rem;
+	background: url(../images/ex-sina.png) no-repeat;
+    background-size: cover;
+}
+.method-qq{
+	display: inline-block;
+    width: 1.5rem;
+    height: 1.5rem;
+	background: url(../images/ex-qq.png) no-repeat;
+    background-size: cover;
+}
