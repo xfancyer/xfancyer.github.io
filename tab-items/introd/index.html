@@ -321,7 +321,7 @@
 		var music=document.getElementById('music');
 		var btn=document.getElementById('btn');
 		
-		btn.onmouseenter=function(){
+		btn.onclick=function(){
 			if(music.paused){
 				music.play();
 				this.className='xuan';
