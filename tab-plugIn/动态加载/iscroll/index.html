@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<title></title>
+		<script src="zepto.js"></script>
+		<script src="iscroll.js"></script>
+		<style type="text/css">
+			*{padding: 0;margin: 0;}
+			html,body{
+				width: 100%;
+				height: 100%;
+				overflow: hidden;
+			}
+			#box{
+				width: 100%;
+				height: 100%;
+				display: flex;
+				flex-flow: column;
+			}
+			header{
+				width: 100%;
+				height: 50px;
+				line-height: 50px;
+				background: pink;
+				text-align: center;
+				color: #007AFF;
+			}
+			footer{
+				width: 100%;
+				height: 50px;
+				line-height: 50px;
+				background: palegoldenrod;
+				text-align: center;
+				color: #007AFF;
+			}
+			#main{
+				width: 100%;
+				flex: 1;
+				background: #ccc;
+				overflow: hidden;
+			}
+		</style>
+	</head>
+	<body>
+		<div id="box">
+			<header>首页</header>
+			<div id="main">
+				<div id="scrollBox">
+					
+					
+				</div>
+			</div>
+			<footer>footer</footer>
+		</div>
+		<script>
+			var myiscroll;
+			spajax()
+			iscroll()
+			function spajax(){
+				$.ajax({
+					url:"http://datainfo.duapp.com/shopdata/getGoods.php",
+					dataType:"jsonp",
+					success:function(data){
+						$.each(data, function(index) {
+							var odl=$("<dl></dl>")
+							var odt=$("<dt></dt>")
+							var oimg=$("<img src='"+data[index].goodsListImg+"' />")
+							var odd=$("<dd>"+data[index].goodsName+"</dd>")
+							odl.append(odt)
+							odl.append(odd)
+							
+							oimg.on("load",function(){
+								odt.html(oimg)
+								//console.log(myiscroll)
+								myiscroll.refresh()
+								
+							})
+							$("#scrollBox").append(odl)
+						});
+					}
+				});
+			}
+			
+		function iscroll(){
+			myiscroll=new IScroll("#main")
+		}
+			
+			$("#scrollBox").on("touchend",function(){
+				console.log(myiscroll.maxScrollY)
+				if(myiscroll.y>50){
+					console.log("正在刷新")
+				}else if(myiscroll.y<myiscroll.maxScrollY-50){
+					spajax()
+				}
+			})
+			
+			
+		</script>
+	</body>
+</html>

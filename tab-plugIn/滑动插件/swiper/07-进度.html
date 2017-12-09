@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<link rel="stylesheet" type="text/css" href="swiper.css"/>
+		<style>
+			.swiper-container {
+			    width: 600px;
+			    height: 300px;
+			} 
+			.swiper-slide{
+				font-size: 50px
+			}
+			.swiper-slide:nth-of-type(1){
+				background-color: cornflowerblue;
+			}
+			.swiper-slide:nth-of-type(2){
+				background-color: coral;
+			}
+			.swiper-slide:nth-of-type(3){
+				background-color: yellowgreen;
+			}
+		</style>
+	</head>
+	<body>
+		<div class="swiper-container">
+		    <div class="swiper-wrapper">
+		        <div class="swiper-slide">Slide 1</div>
+		        <div class="swiper-slide">Slide 2</div>
+		        <div class="swiper-slide">Slide 3</div>
+		    </div>
+		</div>
+		<button id="btn">按钮</button>
+		
+		<script src="swiper.js"></script>
+		<script>        
+			var mySwiper = new Swiper ('.swiper-container', {
+			    direction: 'horizontal',
+			    
+			})
+			
+//			btn.onclick = function(){
+//				alert( mySwiper.progress );
+//				alert( mySwiper.slides[0].progress );
+//				console.log( mySwiper.slides[0].progress,mySwiper.slides[1].progress,mySwiper.slides[2].progress );
+//			}
+			
+			setInterval(function(){
+				console.log( mySwiper.slides[0].progress,mySwiper.slides[1].progress,mySwiper.slides[2].progress );
+			},20)
+		  </script>
+	</body>
+</html>
