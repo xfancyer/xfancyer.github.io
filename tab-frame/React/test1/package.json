@@ -1,0 +1,26 @@
+{
+  "name": "project",
+  "version": "0.0.1",
+  "description": "qianfeng",
+  "main": "asdsa",
+  "scripts": {
+    "test": "dasd"
+  },
+  "repository": {
+    "type": "git",
+    "url": "adsad"
+  },
+  "keywords": [
+    "asdsa"
+  ],
+  "author": "asdsa",
+  "license": "ISC",
+  "devDependencies": {
+    "jquery": "^3.1.1",
+    "jsx-loader": "^0.13.2",
+    "react": "^15.4.2",
+    "react-dom": "^15.4.2",
+    "webpack": "^2.2.1",
+    "webpack-dev-server": "^2.3.0"
+  }
+}

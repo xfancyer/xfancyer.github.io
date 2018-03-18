@@ -1,0 +1,89 @@
+
+#order-list-page .content{
+	
+	bottom: 0;
+}
+.order-state-list{
+	display: flex;
+}
+#order-li{
+	text-align: center;
+	flex: 1;
+}
+#order-li:hover{
+	background: #000000;
+	color: #fff;
+}
+#order-list-page .order-product-info{
+	margin-top: 10px;
+	padding: 0 20px;
+}
+#order-list-page .confirm-li{
+	height: 110px;
+	margin-top: 10px;
+	border-bottom: 1px solid #ccc;
+	display: flex;
+}
+#order-list-page .confirm-pic{
+	flex: 1;
+}
+#order-list-page .confirm-li img{
+	width: 100Px;
+	height: 100px;
+
+}
+#order-list-page .text-info{
+	font-size: 14px;
+	margin-top: 10px;
+	flex: 1;
+}
+#order-list-page .p-name{
+	overflow: hidden;
+	text-overflow: ellipsis;
+	display: -webkit-box;
+	-webkit-box-orient: vertical;
+	-webkit-line-clamp: 3;
+}
+#order-list-page .order-product-info .num-info{
+	margin-top: 35px;
+	flex: 1;
+}
+#order-list-page .order-product-info .num-info em{
+	color: orange;
+}
+
+#order-list-page .total-info{
+	font-size: 14px;
+	margin-left: 20px;
+	margin-right: 20px;
+	margin-top: 15px;
+	border-bottom: 1px solid #ccc;
+	height: 33px;
+	padding-left: 120px;
+	
+}
+#order-list-page .total-info em{
+	font-weight: bold;
+	color: orange;
+}
+
+#order-list-page .order-btns div{
+	border-bottom: 1px solid #ccc;
+	height: 36px;
+	display: flex;
+	margin: 10px 20px 10px 20px;
+}
+
+#order-list-page .order-btns em{
+	font-size: 12px;
+	color: orange;
+}
+#order-list-page .order-btns div p {
+	text-align: center;
+	flex: 1;
+}
+#order-list-page .order-btns button{
+	border: 1px solid #ccc;
+	border-radius: 3px;
+	padding: 5px 10px;
+}

@@ -1,0 +1,139 @@
+<!doctype html>
+<html lang="en">
+
+	<head>
+		<meta charset="UTF-8" />
+		<title>Document</title>
+		<script src="../../js/jquery-1.11.3.js" type="text/javascript" charset="utf-8"></script>
+		<style>
+			* {
+				margin: 0;
+				padding: 0;
+			}
+			
+			ul,
+			li {
+				list-style: none;
+			}
+			
+			#box {
+				height: 320px;
+				width: 640px;
+				border: 1px solid deeppink;
+				margin: 50px auto;
+				position: relative;
+			}
+			
+			.con {
+				height: 320px;
+				width: 640px;
+				perspective: 800px;
+				
+				perspective-origin: center;
+			}
+			
+			.con li {
+				float:left;
+				transform-style: preserve-3d;
+				width:80px;height:100%;
+				transform-origin:center center -160px;
+			}
+			
+			.con li a {
+				display: block;
+				width:80px;height:100%;
+				position: absolute;
+			}
+			
+			.con li a:nth-child(1) {
+				background: url(img/01.jpg);
+				
+			}
+			
+			.con li a:nth-child(2) {
+				background: url(img/02.jpg);
+				top:-320px;
+				transform: rotateX(90deg);
+				transform-origin: bottom;
+				
+			}
+			
+			.con li a:nth-child(3) {
+				background: url(img/03.jpg);
+				top:320px;
+				transform:rotateX(-90deg);
+				transform-origin:top;
+			}
+			
+			.con li a:nth-child(4) {
+				background: url(img/04.jpg);
+				transform:translateZ(-320px) rotateX(180deg)
+			}
+			
+			@keyframes play {
+				0% {
+					transform: rotateX(0);
+				}
+				100% {
+					transform: rotateX(-360deg);
+				}
+			}
+			
+			.xuanzhuan:hover li{
+				animation: play 8s linear infinite;
+			}
+			
+			#btn{position:absolute;left:0;top:400px;}
+			#btn li{
+				float:left;
+				list-style:none;
+				width:50px;height:50px;
+				margin:5px;
+				background:#000;color:#fff;
+				text-align:center;
+				
+			}
+			
+		</style>
+	</head>
+
+	<body>
+		<div id="box">
+			<ul class="con xuanzhuan" id="con">
+				
+			</ul>
+			<ul class="btn" id="btn">
+				<li>1</li>
+				<li>2</li>
+				<li>3</li>
+				<li>4</li>
+			</ul>
+		</div>
+	</body>
+	<script type="text/javascript">
+	var cube_ul = document.getElementById("con");
+	var cube = cube_ul.getElementsByTagName('li')
+		var str='';
+		var btn = document.getElementById("btn")
+		var obtn = btn.getElementsByTagName('li')
+		for(var i=0;i<8;i++){
+			   str += '<li><a href="" style="background-position:'+ -i*80+'px 0"></a>';
+				str+='<a href="" style="background-position:'+ -i*80+'px 0">aaaaaaaa</a>'
+				str+='<a href="" style="background-position:'+ -i*80+'px 0"></a>'
+				str+='<a href="" style="background-position:'+ -i*80+'px 0"></a></li>'
+				
+		}
+		$(str).appendTo($('.con'))
+		
+		for(var i=0;i<obtn.length;i++){
+			obtn[i].index = i;
+			obtn[i].onclick = function(){
+				console.log(this.index)
+				for(var j=0;j<cube.length;j++){
+					cube[j].style.transition = "all "+(500+(j*100))+'ms';
+					cube[j].style.transform = "rotateX("+this.index*90+"deg)";
+				}
+			}
+		}
+	</script>
+</html>

@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+			*{padding: 0;margin: 0;}
+			html,body{
+				width: 100%;
+				height: 100%;
+				background: url(img/bbg.jpg);
+				background-size: 100% 100%;
+				
+			}
+		</style>
+	</head>
+	<body>
+		<canvas id="can"></canvas>
+		<img id="pic" src="" alt="" />
+		<input type="button" value="按钮" onclick="asd()" />
+		<script>
+			var pic=document.getElementById("pic")
+			var can=document.getElementById("can")
+			var ctx=can.getContext("2d")/*绘画环境*/
+			var w=window.innerWidth;
+			var h=window.innerHeight;
+			can.width=w
+			can.height=h
+			can.onmousedown=function(ev){
+				var ev=window.event||ev
+				ctx.strokeStyle="#fFF"
+				ctx.moveTo(ev.clientX-can.offsetLeft,ev.clientY-can.offsetTop)
+				document.onmousemove=function(ev){
+					var ev=window.event||ev
+					ctx.lineTo(ev.clientX-can.offsetLeft,ev.clientY-can.offsetTop)
+					ctx.stroke()
+				}
+				document.onmouseup=function(){
+					document.onmousedown=null;
+					document.onmousemove=null;
+				}
+			}
+			
+			
+			function asd(){
+				var bspic=can.toDataURL()
+				console.log(bspic)
+				pic.src=bspic
+			}
+			
+		</script>
+	</body>
+</html>

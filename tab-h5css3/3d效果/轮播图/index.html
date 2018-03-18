@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+			#box{
+				width: 400px;
+				height: 400px;
+				margin: 50px auto;
+				perspective:800px;
+				perspective-origin: center 50px;
+			}
+			.cube{
+				width: 200px;
+				height: 200px;
+				transform-style: preserve-3d;
+			}
+			.cube div{
+				width: 200px;
+				height: 200px;
+				position: absolute;
+				opacity: 0.6;
+			}
+			.cube div:nth-child(1){
+				background: red;
+				transform: translateZ(100px);
+			}
+			.cube div:nth-child(2){
+				background: yellow;
+				transform: translateZ(-100px);
+			}
+			.cube div:nth-child(3){
+				background: green;
+				transform-origin: 0 100px;
+				transform:rotateY(90deg) translateX(-100px);
+				
+			}
+			.cube div:nth-child(4){
+				background: blue;
+				transform-origin: 200px 100px;
+				transform:rotateY(90deg) translateX(100px);
+			}
+			.cube div:nth-child(5){
+				background: pink;
+				transform:translateY(-100px) rotateX(90deg);
+			}
+			.cube div:nth-child(6){
+				background: orange;
+				transform: translateY(100px) rotateX(90deg);
+			}
+			@keyframes play{
+				0%{transform:translateZ(0) rotateX(0) rotateY(0);}
+				100%{transform:translateZ(600px) rotateX(360deg) rotateY(360deg);}
+			}
+			.xuanz{
+				animation: play 8s linear infinite;
+			}
+		</style>
+	</head>
+	<body>
+		<div id="box">
+			<div class="cube xuanz">
+				<div></div>
+				<div></div>
+				<div></div>
+				<div></div>
+				<div></div>
+				<div></div>
+			</div>
+		</div>
+	</body>
+</html>

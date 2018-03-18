@@ -1,0 +1,201 @@
+<!doctype html>
+<html lang="en">
+
+	<head>
+		<meta charset="UTF-8" />
+		<title>Document</title>
+		<script src="../../js/jquery-1.11.3.js" type="text/javascript" charset="utf-8"></script>
+		<style>
+			* {
+				margin: 0;
+				padding: 0;
+			}
+			
+			ul,
+			li {
+				list-style: none;
+			}
+			
+			#box{
+				height:320px;width:640px;
+				border:1px solid yellow;
+				margin:100px auto;
+				position:relative;
+			}
+			.cont{
+				height:320px;width:640px;
+				perspective:1200px;
+				/*perspective-origin:right;*/
+				/*为什么一定是right????!!!*/
+				
+			}
+			.cont li{
+				float:left;
+				transform-style:preserve-3d;
+				transform-origin:center center -160px;
+				width:80px;height:100%;
+			}
+			.cont li a{
+				display:block;
+				width:80px;height:100%;
+				position:absolute;
+				
+			}
+			.cont li a:nth-child(1){
+				background:red;
+				top:-320px;
+				transform:rotateX(90deg);
+				transform-origin: bottom;
+			}
+			.cont li a:nth-child(2){
+				top:320px;
+				transform:rotateX(-90deg);
+				transform-origin: top;
+				background:yellow;
+			}
+			.cont li a:nth-child(3){
+				background:blue;
+				transform:translateZ(-320px) rotateX(180deg)
+			}
+			.cont li a:nth-child(4){
+				background:gold;
+			}
+			.cont li:hover{
+				animation:play 8s linear infinite;
+			}
+			@keyframes play{
+				0%{transform:rotateX(0)}
+				100%{
+					transform:rotateX(-360deg)
+				}
+			}
+			
+			/*			
+			@keyframes play {
+				0% {
+					transform: rotateX(0);
+				}
+				100% {
+					transform: rotateX(-360deg);
+				}
+			}
+			
+			.xuanzhuan li{
+				animation: play 8s linear infinite;
+			}
+			*/
+			#btn{position:absolute;left:0;top:400px;}
+			#btn li{
+				float:left;
+				list-style:none;
+				width:50px;height:50px;
+				margin:5px;
+				background:#000;color:#fff;
+				text-align:center;
+				
+			}
+			
+		</style>
+	</head>
+
+	<body>
+		<div id="box">
+			<ul class="cont xuanzhuan" id="con">
+				<li style="opacity:0.1">
+					<a href="#">111</a>
+					<a href="#">222</a>
+					<a href="#">333</a>
+					<a href="#" style="z-index:-1">444</a>
+					<!--1这里有个小问题，他会压到第一个的上面~~-->
+				</li>
+				<li style="opacity:0.1">
+					<a href="#">111</a>
+					<a href="#">222</a>
+					<a href="#">333</a>
+					<a href="#" style="z-index:-1">444</a>
+					<!--2这里有个小问题，他会压到第一个的上面~~-->
+				</li>
+				<li style="opacity:0.1">
+					<a href="#">111</a>
+					<a href="#">222</a>
+					<a href="#">333</a>
+					<a href="#" style="z-index:-1">444</a>
+					<!--3这里有个小问题，他会压到第一个的上面~~-->
+				</li>
+				<li style="opacity:0.1;z-index:-1">
+					<a href="#">111</a>
+					<a href="#">222</a>
+					<a href="#">333</a>
+					<a href="#" style="z-index:-1">444</a>
+					<!--4这里有个小问题，他会压到第一个的上面~~-->
+				</li>
+				<li style="opacity:1;z-index: -2;" >
+					<a href="#">111</a>
+					<a href="#">222</a>
+					<a href="#">333</a>
+					<a href="#" style="z-index:-1">444</a>
+					<!--5这里有个小问题，他会压到第一个的上面~~-->
+					<!--
+						4 5是中间区域，将6透明度设为0.5可以观察到5有透明模糊区域，说明6压到了5上
+						层级问题！后面的层级大
+						但是直接更改层级不行= = ！！！
+					-->
+				</li>
+				<li style="opacity:1;z-index: -3;">
+					<a href="#">111</a>
+					<a href="#">222</a>
+					<a href="#">333</a>
+					<a href="#" style="z-index:-1">444</a>
+					<!--这里有个小问题，他会压到第一个的上面~~-->
+				</li>
+				<li style="z-index:-4">
+					<a href="#">111</a>
+					<a href="#">222</a>
+					<a href="#">333</a>
+					<a href="#" style="z-index:-1">444</a>
+					<!--这里有个小问题，他会压到第一个的上面~~-->
+				</li>
+				<li style="z-index:-4">
+					<a href="#">111</a>
+					<a href="#">222</a>
+					<a href="#">333</a>
+					<a href="#" style="z-index:-1">444</a>
+					<!--这里有个小问题，他会压到第一个的上面~~-->
+				</li>
+				
+			</ul>
+			<ul class="btn" id="btn">
+				<li>1</li>
+				<li>2</li>
+				<li>3</li>
+				<li>4</li>
+			</ul>
+		</div>
+	</body>
+	<script type="text/javascript">
+	var cube_ul = document.getElementById("con");
+	var cube = cube_ul.getElementsByTagName('li')
+		var str='';
+		var btn = document.getElementById("btn")
+		var obtn = btn.getElementsByTagName('li')
+		for(var i=0;i<8;i++){
+			   str += '<li><a href="" style="background-position:'+ -i*80+'px 0"></a>';
+				str+='<a href="" style="background-position:'+ -i*80+'px 0">aaaaaaaa</a>'
+				str+='<a href="" style="background-position:'+ -i*80+'px 0"></a>'
+				str+='<a href="" style="background-position:'+ -i*80+'px 0"></a></li>'
+				
+		}
+		$(str).appendTo($('.con'))
+		
+		for(var i=0;i<obtn.length;i++){
+			obtn[i].index = i;
+			obtn[i].onclick = function(){
+				console.log(this.index)
+				for(var j=0;j<cube.length;j++){
+					cube[j].style.transition = "all "+(500+(j*500))+'ms';
+					cube[j].style.transform = "rotateX("+this.index*90+"deg)";
+				}
+			}
+		}
+	</script>
+</html>

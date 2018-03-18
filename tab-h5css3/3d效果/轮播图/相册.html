@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+			*{
+				padding: 0;margin: 0;
+			}
+			html,body{
+				width: 100%;
+				height: 100%;
+				background: #000;
+				overflow: hidden;
+			}
+			#box{
+				width: 300px;
+				height: 400px;
+				margin: 150px auto;
+			}
+			.cube{
+				width: 300px;
+				height: 400px;
+				position: relative;
+				animation: play 10s linear infinite;
+				transform-style: preserve-3d;
+			}
+			.cube div{
+				width: 300px;
+				height: 400px;
+				position: absolute;
+			}
+			.cube div:nth-child(1){
+				background: url(img/01.jpg);
+				background-size: 100% 100%;
+				transform:rotateY(36deg) translateZ(500px);
+			}
+			.cube div:nth-child(2){
+				background: url(img/02.jpg);
+				background-size: 100% 100%;
+				transform:rotateY(72deg) translateZ(400px);
+			}
+			.cube div:nth-child(3){
+				background: url(img/03.jpg);
+				background-size: 100% 100%;
+				transform:rotateY(108deg) translateZ(500px);
+			}
+			.cube div:nth-child(4){
+				background: url(img/04.jpg);
+				background-size: 100% 100%;
+				transform:rotateY(144deg) translateZ(400px);
+			}
+			.cube div:nth-child(5){
+				background: url(img/05.jpg);
+				background-size: 100% 100%;
+				transform:rotateY(180deg) translateZ(500px);
+			}
+			.cube div:nth-child(6){
+				background: url(img/06.jpg);
+				background-size: 100% 100%;
+				transform:rotateY(216deg) translateZ(400px);
+			}
+			.cube div:nth-child(7){
+				background: url(img/07.jpg);
+				background-size: 100% 100%;
+				transform:rotateY(252deg) translateZ(500px);
+			}
+			.cube div:nth-child(8){
+				background: url(img/08.jpg);
+				background-size: 100% 100%;
+				transform:rotateY(288deg) translateZ(400px);
+			}
+			.cube div:nth-child(9){
+				background: url(img/09.jpg);
+				background-size: 100% 100%;
+				transform:rotateY(324deg) translateZ(500px);
+			}
+			.cube div:nth-child(10){
+				background: url(img/10.jpg);
+				background-size: 100% 100%;
+				transform:rotateY(360deg) translateZ(400px);
+			}
+			.cube div:nth-child(11){
+				background: url(img/06.jpg);
+				background-size: 100% 100%;
+				transform:rotateY(90deg);
+			}
+			.cube div:nth-child(12){
+				background: url(img/04.jpg);
+				background-size: 100% 100%;
+			
+			}
+			@keyframes play{
+				0%{transform:rotateY(0);}
+				100%{transform:rotateY(360deg)}
+			}
+		</style>
+	</head>
+	<body>
+		<div id="box">
+			<div class="cube">
+				<div></div>
+				<div></div>
+				<div></div>
+				<div></div>
+				<div></div>
+				<div></div>
+				<div></div>
+				<div></div>
+				<div></div>
+				<div></div>
+				<div></div>
+				<div></div>
+			</div>
+		</div>
+	</body>
+</html>

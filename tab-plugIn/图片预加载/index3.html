@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8" />
+  <title>图片预加载-有序加载</title>
+  <style>
+    a {
+      text-decoration: none;
+    }
+    .box {
+      text-align: center;
+    }
+    .btn {
+      display: inline-block;
+      height: 30px;
+      line-height: 30px;
+      border: 1px solid #ccc;
+      background-color: #fff;
+      padding: 0 10px;
+      margin-right: 50px;
+      color: #333;
+    }
+    .btn:hover {
+      background-color: #eee;
+    }
+  </style>
+</head>
+<body>
+  <div class="box">
+    <img src="./img/qq/01.gif" id="img" width="400" />
+    <p>
+      <a href="javascript:;" class="btn" data-control="prev">上一页</a>
+      <a href="javascript:;" class="btn" data-control="next">下一页</a>
+    </p>
+  </div>
+
+  <script src="./js/jquery.min.js"></script>
+  <script src="./js/preload.js"></script>
+  <script>
+    var imgs = [
+      './img/qq/01.gif',
+      './img/qq/02.gif',
+      './img/qq/03.gif',
+      './img/qq/04.gif',
+      './img/qq/05.gif',
+      './img/qq/06.gif',
+      './img/qq/07.gif',
+      './img/qq/08.gif',
+      './img/qq/09.gif',
+      './img/qq/10.gif',
+
+    ];
+    var len = imgs.length,
+        index = 0;
+    $.preload(imgs, {
+      order: 'ordered'
+    })
+    $('.btn').on('click', function() {
+      if ($(this).data('control') === 'prev') {
+        index = Math.max(0, --index);
+      } else {
+        index = Math.min(len - 1, ++index);
+      }
+      document.title = (index + 1) + '/' + len;
+      $('#img').attr('src', imgs[index]);
+    });
+  </script>
+</body>
+</html>

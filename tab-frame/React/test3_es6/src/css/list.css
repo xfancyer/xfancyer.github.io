@@ -1,0 +1,35 @@
+#list-page{
+	width: 100%;
+	height: 100%;
+}
+
+#list-page .pro-item{
+	display: flex;
+	border-bottom: 1px solid #ccc;
+}
+#list-page .pic{
+	flex: 1;
+}
+#list-page .pro-item p{
+	flex: 1;
+}
+#list-page .pro-name{
+	margin-left: 20px;
+	margin-top: 10px;
+	font-size: 14px;
+	line-height: 20px;
+	height: 40px;
+ 	overflow: hidden;
+ 	text-overflow: ellipsis;
+ 	display: -webkit-box;
+ 	-webkit-box-orient: vertical;
+ 	-webkit-line-clamp: 2;
+}
+#list-page .del{
+	display: block;
+	color: #9E0A08;
+}
+#list-page .price{
+	margin-top: 20px;
+	margin-left: 10px;
+}
